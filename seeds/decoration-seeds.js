@@ -33,6 +33,5 @@ const decoData = [
   },
 ];
 
-const seedProducts = () => Decoration.bulkCreate(productData);
-
+const seedProducts = () => Decoration.bulkCreate(decoData);
 module.exports = seedProducts;
