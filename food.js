@@ -19,7 +19,7 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    guest_name: {
+    ingredients: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -35,4 +35,4 @@ Food.init(
   }
 );
 
-module.exports = Dish;
+module.exports = Food;
