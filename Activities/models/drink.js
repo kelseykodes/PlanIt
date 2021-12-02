@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Drink extends Model {}
+class Drinks extends Model {}
 
-Drink.init(
+Drinks.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -23,6 +23,10 @@ Drink.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    isAlcoholic: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
   },
   {
     sequelize,
@@ -32,4 +36,4 @@ Drink.init(
   }
 );
 
-module.exports = Drink;
+module.exports = Drinks;

@@ -1,4 +1,6 @@
-[
+const { Food } = require('../models');
+
+const foodData = [
     {
       "dish_name": "French Bread with Brie Cheese",
       "description": "French baguette with warm brie",
