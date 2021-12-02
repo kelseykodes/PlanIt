@@ -17,3 +17,4 @@ CREATE DATABASE decoration_db;
 DROP DATABASE IF EXISTS music_db;
 
 CREATE DATABASE music_db;
+

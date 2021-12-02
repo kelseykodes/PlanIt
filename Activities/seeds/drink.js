@@ -51,3 +51,4 @@ const drinksData = [
 
 const seedDrink = () => Drinks.bulkCreate(drinksData);
 module.exports = seedDrink;
+
