@@ -48,3 +48,7 @@ const foodData = [
       "has_nuts": false
     }
   ]
+
+const seedFood = () => Food.bulkCreate(foodData);
+module.exports = seedFood;
+

@@ -14,3 +14,7 @@ DROP DATABASE IF EXISTS decoration_db;
 
 CREATE DATABASE decoration_db;
 
+DROP DATABASE IF EXISTS music_db;
+
+CREATE DATABASE music_db;
+

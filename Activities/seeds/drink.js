@@ -48,3 +48,7 @@ const drinksData = [
       "isAlcoholic": true
     }
   ]
+
+const seedDrink = () => Drinks.bulkCreate(drinksData);
+module.exports = seedDrink;
+
