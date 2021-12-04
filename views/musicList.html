@@ -15,16 +15,19 @@
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous"
     />
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
 
 <body>
-  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <!-- <header>
+      <h1><img src='../public/src-music/musicListGeneratorPage/200.gif'>Welcome! Generate Your Own Music Playlist for The Party</h1>
+  </header> -->
+  <canvas id="canvas"></canvas>
+  
   <header>
-    <h1><img src='./src/musicListGeneratorPage/200.gif'></a>  Welcome! Generate Your Own Music Playlist for The Party</h1>
-  </header>
-  <br>
-  <br>
+      <h1><img src='../public/src-music/musicListGeneratorPage/200.gif'>  Welcome! Generate Your Own Music Playlist for The Party</h1>
+  </header> 
+
   <main>
     <div class='my-music-list d-inline-flex justify-content-around col-5'>
       <div>
@@ -41,7 +44,7 @@
             Third Song by XXX
           </li>
         </ul>
-        <button>Party Time !</button>
+        <a href='./musicPlayer.html'><button type="button-reset" class="btn btn-secondary justify-content-between">Party Time !</button></a>
       </div>
     </div>
 
@@ -73,22 +76,18 @@
         </ul>
         <br>
         <div>
-          <button type="button-reset" class="btn btn-secondary justify-content-between" data-bs-dismiss="modal">Reset</button>
-          <button type="button-save" class="btn btn-primary justify-content-between">Save</button> 
+          <button type="button-reset" class="btn btn-secondary justify-content-between">Reset</button>
+          <button type="button-save" class="btn btn-secondary justify-content-between">Save</button> 
+          <button type="button-click-all" class="btn btn-secondary justify-content-between">Click All</button>
         </div>  
       </div>
     </div>  
   </main>
   <br>
-  <br>
-  <footer class='d-inline-flex justify-content-none'>
-    <img src='./src/musicListGeneratorPage/The Gingerbread Man.gif'>
-    <img src='./src/musicListGeneratorPage/The Gingerbread Man.gif'>
-    <img src='./src/musicListGeneratorPage/The Gingerbread Man.gif'>
-    <img src='./src/musicListGeneratorPage/The Gingerbread Man.gif'>
-    <img src='./src/musicListGeneratorPage/The Gingerbread Man.gif'>
-  </footer>
-  <script src="./js/snowbackground.js"></script> 
+  <br>  
+  
+  <script src="../public/js/snowbackground.js"></script> 
+  
 </body>
 
 
