@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+/* html{ */
+    /* background-image:url('#'); */
+    /* background-size: cover; */
+      
+/* } */
+
+canvas{
+    z-index: 2;
+}
+
+body {
+    font-family:'Architects Daughter', sans-serif, cursive;
+    background-color: black; 
+    color: white;
+    /* background-image:url('../src-music/musicListGeneratorPage/1NYOYWAsYF_small.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; */
+}
+
+input{
+    color: white;
+}
+
+.login-card {
+    display:inline;
+    align-items: center;
+  }

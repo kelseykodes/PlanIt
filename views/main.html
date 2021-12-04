@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+              <header class="brand-logo "><img src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif' width="50px" height="50px">Welcome to PlanIt </header>
+              <!-- for mobile use -->
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
+                <li><a class="waves-effect waves-light btn" href="#">Login</a></li>
+                <!-- {{#if loggedIn}}
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                <a href="/login">Login</a>
+                {{/if}} -->
+                <li><a class="waves-effect waves-light btn">Contact</a></li>
+              </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                  <li class="tab"><a href="#">Themes</a></li>
+                  <li class="tab"><a href="#">Activities</a></li>
+                  <li class="tab"><a href="#">Food/Drinks</a></li>
+                  <li class="tab"><a href="./musicList.html">Music</a></li>
+                  <li class="tab"><a href="#">Decoration</a></li>
+                </ul>
+              </div>  
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <main>
+            <!-- login handlebars -->
+            <div class="container"> 
+                <form class="form login-form login-card">
+                    <h2 class="page-title">Login</h2>  
+                    <div class="form-group">
+                    <label for="email-login">Email:</label>
+                    <input class="form-input" type="text" id="email-login"/>
+                    </div>
+                    <div class="form-group">
+                    <label for="password-login">Password:</label>
+                    <input class="form-input" type="password" id="password-login" />
+                    </div>
+                    <div class="form-group">
+                    <button class="btn btn-primary" type="submit">login</button>
+                    </div>
+                </form>
+                <br>
+                <br>
+                <form class="form signup-form login-card">
+                <h2 class="page-title">Signup</h2>  
+                <div class="form-group">
+                    <label for="username-signup">Username:</label>
+                    <input class="form-input" type="text" id="username-signup" />
+                </div>
+                <div class="form-group">
+                    <label for="email-signup">Email:</label>
+                    <input class="form-input" type="text" id="email-signup" />
+                </div>
+                <div class="form-group">
+                    <label for="password-signup">Password:</label>
+                    <input class="form-input" type="password" id="password-signup" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">signup</button>
+                </div>
+                </form>
+              </div>
+              
+              <script src="../public/js/login.js"></script>
+
+            
+            <!-- Home Page Handlebars-->
+            <!-- <h2 class='center'>Create the Party Of Your Own Dreams</h2>
+            <p class='center'>We are here to help you create your own party with all the materials you may need!</p>
+            <div class='home-page'>
+                <img src='https://media.giphy.com/media/l4FGKa1f18gAcWGEU/giphy.gif' width='100%' height='100%' >   
+            </div> -->
+
+
+            <!-- main page Handlebars-->
+            <!-- <div class='change'>
+            {{{body}}}
+            </div> -->
+        </main>
+               
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+  </html>
+        
