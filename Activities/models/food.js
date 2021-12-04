@@ -21,7 +21,6 @@ Food.init(
     },
     ingredients: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     has_nuts: {
       type: DataTypes.BOOLEAN,

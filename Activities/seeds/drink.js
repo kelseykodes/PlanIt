@@ -2,51 +2,75 @@ const { Drinks } = require('../models');
 
 const drinksData = [
     {
-      "drink_name": "French Bread with Brie Cheese",
-      "description": "French baguette with warm brie",
-      "ingredients": "Ivan",
-      "isAlcoholic": true
+      "drink_name": "Mojito",
+      "description": "Minty refreshment",
+      "ingredients": "Fresh mint, white rum, simple syrup, lime juice, club soda or sparkling water, ice",
+      "hasAlcohol": true
     },
     {
-      "drink_name": "Cheese Plate with Spanish Chorizo",
+      "drink_name": "Eggnog",
       "description":
-        "Manchego, Iberico, Cabrales, fig jam, grapes, pecans, and Spanich Chorizo",
-      "ingredients": "Isa",
-      "isAlcoholic": false
+        "eggnog",
+      "ingredients": `6 large egg yolks
+      3/4 cup sugar
+      2 cups milk
+      2 whole cloves
+      Pinch cinnamon
+      1 cup heavy cream
+       1 teaspoon freshly grated nutmeg (lightly packed)
+      1 1/2 teaspoons vanilla extract
+      2 tablespoons bourbon, or to taste
+      2 tablespoons rum, or to taste
+      4 egg whites, optional`,
+      "hasAlcohol": false
     },
     {
-      "drink_name": "Fish Tacos",
+      "drink_name": "Hot Chocolate",
       "description":
-        "Battered/fried fish, corn tortillas, fresh slaw with jalepenos and cilantro, pickled red onion",
-      "ingredients": "Carlos",
-      "isAlcoholic": true
+        "Rich chocolatey goodness",
+      "ingredients": "1 Swiss Miss hot chocolate packet, milk or water",
+      "hasAlcohol": false
     },
     {
-      "drink_name": "Tropical Fruit Salad",
-      "description": "Guava, papaya, pineapple, mango, and star fruit",
-      "ingredients": "Sonia",
-      "isAlcoholic": true
+      "drink_name": "Boozy Grinch Punch",
+      "description": "boozy grinch punch",
+      "ingredients": `1 (0.13-oz.) packet Kool-Aid Lemon Lime mix 
+      4 c.  water
+      4 c. ice 
+      3 c. lemon-lime soda 
+      2 c. pineapple juice 
+      2 c. vodka 
+      1 c. ginger ale 
+      Lime wedges, for rimming 
+      Red sanding sugar, for rimming `,
+      "hasAlcohol": true
     },
     {
-      "drink_name": "Pork Gyoza",
+      "drink_name": "Perfect Mudslide",
       "description":
-        "Homemade japanese dumplings stuffed with a pork and green onion filling, served with peanut dipping sauce",
-      "ingredients": "Karissa",
-      "isAlcoholic": false
+        "perfect mudsldie",
+      "ingredients": `Chocolate syrup, for glass
+      4 oz. vodka
+      2 oz. Kahlua
+      2 oz. Baileys
+      1/4 c. heavy cream
+      Ice
+      Chocolate shavings, for garnish`,
+      "hasAlcohol": false
     },
     {
-      "drink_name": "Yebeg Tibs with Injera Bread",
+      "drink_name": "Apple Ginger Sour Mocktail with Rosemary",
       "description":
-        "Marinated lamb dish with rosemary, garlic, onion, tomato, jalapeño and the East African spice berbere",
-      "ingredients": "Paulette",
-      "isAlcoholic": true
+        "for kids",
+      "ingredients": `1/2 tablespoon cranberry juice concentrate
+      1/2 tablespoon fresh lemon juice
+      1/2 ounce whiskey sour mixer
+      1-ounce maple whiskey sour mixer
+      3 1/2  ounces apple ginger juice
+      garnish with a sprig of fresh rosemary
+      ice`,
+      "hasAlcohol": true
     },
-    {
-      "drink_name": "Cape Malay Curry",
-      "description": "Chicken and vegitable curry dish with basmati rice",
-      "ingredients": "Samuel",
-      "isAlcoholic": true
-    }
   ]
 
 const seedDrink = () => Drinks.bulkCreate(drinksData);
