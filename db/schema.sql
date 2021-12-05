@@ -18,3 +18,5 @@ DROP DATABASE IF EXISTS music_db;
 
 CREATE DATABASE music_db;
 
+-- Make a party_db to house all the different sectors of party planning
+

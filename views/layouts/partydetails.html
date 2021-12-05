@@ -5,7 +5,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -66,35 +66,70 @@
                 <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                   <i class="material-icons right">send</i>
                 </button>
+
+                <a class="waves-effect waves-light btn">Cancel</a>
                 
                 <!-- add materialize cards -->
-                <div> 
-                    <div>What would you like to add?</div>
-                    <div id="decorations">
-
-                        <!-- big red "+" button -->
-                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                <div class="container"> 
+                    <h2>What would you like to add?</h2>
+                    <!-- Make these a handlebar? -->
+                    <div class="row" id="food">
+                      <div class="col s3 m6">
+                        <div class="card">
+                          <div class="card-image">
+                            <img src="images/sample-1.jpg">
+                            <span class="card-title">Food</span>
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                          </div>
+                          <div class="card-content">
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
                     </div>  
-                    <div id="food-drinks">
-
-                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
-                    </div>  
-                    <div id="activities">
-
-                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
-                    </div>   
-                    <div id="music">
-                      
-                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                    <div class="row" id="activities">
+                      <div class="col s3 m6">
+                        <div class="card">
+                          <div class="card-image">
+                            <img src="images/sample-1.jpg">
+                            <span class="card-title">Activities</span>
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                          </div>
+                          <div class="card-content">
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" id="music">
+                      <div class="col s3 m6">
+                        <div class="card">
+                          <div class="card-image">
+                            <img src="images/sample-1.jpg">
+                            <span class="card-title">Music</span>
+                            <a href="/musiclist" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                          </div>
+                          <div class="card-content">
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" id="decorations">
+                      <div class="col s3 m6">
+                        <div class="card">
+                          <div class="card-image">
+                            <img src="images/sample-1.jpg">
+                            <span class="card-title">Decorations</span>
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                          </div>
+                          <div class="card-content">
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
                     </div>        
-
-
-
-
                 </div>
-
-                <button type="button">Cancel</button>
-                <button type="button">Save</button>
             </form>
 
 

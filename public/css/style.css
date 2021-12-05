@@ -27,15 +27,27 @@ input{
 .login-card {
     display:inline;
     align-items: center;
-  }
+}
 
   /* Party Details CSS */
   /* ? Should I make a separate file for the party details page? */
 
-main {
+main, form, body {
     margin: 30px;
-  }
+}
 
-body {
-    margin: 30px;
-  }
+.container {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col .s3 .m3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: black;
+}
+
