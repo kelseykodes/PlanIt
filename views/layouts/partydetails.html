@@ -43,19 +43,63 @@
             <li><a href="#">Contact</a></li>
         </ul>
         <main>
-            
-            <!-- Home Page Handlebars-->
-            <h2 class='center'>Create the Party Of Your Own Dreams</h2>
-            <p class='center'>We are here to help you create your own party with all the materials you may need!</p>
-            <div class='home-page'>
-                <img src='https://media.giphy.com/media/l4FGKa1f18gAcWGEU/giphy.gif' width='100%' height='100%' >   
-            </div>
-
-
             <!-- main page Handlebars-->
-            <!-- <div class='change'>
+           <!-- {{!-- <div class='change'>
             {{{body}}}
-            </div> -->
+            </div>  --}} -->
+            <form>
+                <div> 
+                    <label for="title">Name of your party:</label>
+                    <input type="text" id="title" name="title">
+                    <label for="date">Date of your party:</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="partydescrip"></textarea>
+                </div>
+                <div> 
+                    <label for="guestsNum">Number of Guests attending:</label>
+                    <input type="number" id="guestsNum" name="guestsNum">
+                </div>
+
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+                
+                <!-- add materialize cards -->
+                <div> 
+                    <div>What would you like to add?</div>
+                    <div id="decorations">
+
+                        <!-- big red "+" button -->
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                    </div>  
+                    <div id="food-drinks">
+
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                    </div>  
+                    <div id="activities">
+
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                    </div>   
+                    <div id="music">
+                      
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                    </div>        
+
+
+
+
+                </div>
+
+                <button type="button">Cancel</button>
+                <button type="button">Save</button>
+            </form>
+
+
+
+
         </main>
                
 
@@ -63,4 +107,3 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
   </html>
-        
