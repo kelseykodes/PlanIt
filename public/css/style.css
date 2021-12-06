@@ -50,3 +50,8 @@ main {
     color: black;
 }
 
+/* scroll bar for the overflow in the party details partials */
+{
+    Overflow-x: scroll; //add horizontal bar option in html
+    Overflow-y: scroll; //add vertical bar option in html
+    }
