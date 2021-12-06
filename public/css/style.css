@@ -32,7 +32,7 @@ input{
   /* Party Details CSS */
   /* ? Should I make a separate file for the party details page? */
 
-main, form, body {
+main {
     margin: 30px;
 }
 
