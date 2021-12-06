@@ -1,12 +1,10 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link rel="stylesheet" type="text/css" href="../public/css/style.css">
-      <!--Let browser know website is optimized for mobile-->
+        {{!-- FIXED PATH TO LINK CSS COORECTLY, ../../ --}}
+      <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
@@ -18,12 +16,13 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
-                <li><a class="waves-effect waves-light btn" href="#">Login</a></li>
-                <!-- {{#if loggedIn}}
-                <button id="logout" class="btn-no-style">Logout</button>
+                {{!-- IF THE USER IS LOGGED IN, LOGOUT BUTTON WILL APPEAR --}}
+                {{#if logged_in}}
+                <button id="logout" class="waves-effect waves-light btn">Logout</button>
                 {{else}}
-                <a href="/login">Login</a>
-                {{/if}} -->
+                {{!-- IF THE USER IS LOGGED OUT THE LOGIN BUTTON WILL APPEAR --}}
+                <li><a class="waves-effect waves-light btn" href="/login">Login</a></li>
+                {{/if}}
                 <li><a class="waves-effect waves-light btn">Contact</a></li>
               </ul>
             </div>
@@ -32,14 +31,16 @@
                   <li class="tab"><a href="#">Themes</a></li>
                   <li class="tab"><a href="#">Activities</a></li>
                   <li class="tab"><a href="#">Food/Drinks</a></li>
-                  <li class="tab"><a href="./musicList.html">Music</a></li>
+                  <li class="tab"><a href="#">Music</a></li>
                   <li class="tab"><a href="#">Decoration</a></li>
                 </ul>
               </div>  
         </nav>
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Login</a></li>
+            {{!-- LINK WILL TAKE USER TO HOME-PAGE --}}
+            <li><a href="/">Home</a></li>
+            {{!-- LINK WILL TAKE USER TO LOGIN/SIGNUP PAGE --}}
+            <li><a href="/login">Login</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
         <main>
@@ -52,6 +53,14 @@
 
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- IF USER IS LOGGED IN, WILL RENDER LOGOUT SCRIPT -->
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{else}}
+      {{!-- IF USER IS NOT LOGGED IN, WILL RENDER LOGIN SCRIPT --}}
+       <script src="js/login.js"></script>
+       {{/if}}
+       {{{_sections.script}}}
     </body>
   </html>
         
