@@ -1,20 +1,5 @@
-DROP DATABASE IF EXISTS Activities_db;
+-- only need one database to contain our models; activities, decorations, music, food, drink
+-- TODO: will have to create tables for each model within the database
+DROP DATABASE IF EXISTS planit_db;
 
-CREATE DATABASE Activities_db;
-
-DROP DATABASE IF EXISTS food_db;
-
-CREATE DATABASE food_db;
-
-DROP DATABASE IF EXISTS drinks_db;
-
-CREATE DATABASE drinks_db;
-
-DROP DATABASE IF EXISTS decoration_db;
-
-CREATE DATABASE decoration_db;
-
-DROP DATABASE IF EXISTS music_db;
-
-CREATE DATABASE music_db;
-
+CREATE DATABASE planit_db;

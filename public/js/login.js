@@ -1,4 +1,6 @@
-const loginFormHandler = async (event) => {
+  // recieved an error in the console that 'const loginFormHandler' could be declared twice
+  // switch const to var
+var loginFormHandler = async (event) => {
     event.preventDefault();
   
     const email = document.querySelector('#email-login').value.trim();
@@ -17,9 +19,10 @@ const loginFormHandler = async (event) => {
         alert('Failed to log in.');
       }
     }
-  };
-  
-  const signupFormHandler = async (event) => {
+};
+  // recieved an error in the console that 'const signupFormHandler' could be declared twice
+  // switch const to var
+var signupFormHandler = async (event) => {
     event.preventDefault();
   
     const username = document.querySelector('#username-signup').value.trim();
