@@ -11,7 +11,7 @@ Food.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    dish_name: {
+    food_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -30,7 +30,7 @@ Food.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dish',
+    modelName: 'food',
   }
 );
 
