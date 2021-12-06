@@ -1,64 +1,54 @@
 const { Music } = require('../models');
 const musicData = [
   {
-    music_name: 'A Little Love',
-    singer: 'Celeste',
-    music_list_id: 2
-  },
-  {
     music_name: 'All I Wang For Christmas Is You',
     singer: 'Mariah Carey',
-    music_list_id: 2
-  },
-  {
-    music_name: 'Happy Xmas War is Over',
-    singer: 'Celine Dion',
-    music_list_id: 2
-  },
-  {
-    music_name: 'Jingle Bell Rock',
-    singer: 'Bobby Helms',
-    music_list_id: 2
+    theme: 'Christmas'
   },
   {
     music_name: 'Last Christmas',
     singer: 'Wham!',
-    music_list_id: 2
+    theme: 'Christmas'
   },
   {
     music_name: 'Let It Snow',
     singer: 'Frank Sinatra',
-    music_list_id: 2
+    theme: 'Christmas'
   },
   {
     music_name: 'Like Its Christmas',
     singer: 'Jonas Brothers',
-    music_list_id: 2
+    theme: 'Christmas'
   },
   {
     music_name: 'Mistletoe',
     singer: 'Justin Bieber',
-    music_list_id: 2
-  },
-  {
-    music_name: 'Rockin Around The Christmas Tree',
-    singer: 'Brenda Lee',
-    music_list_id: 2
+    theme: 'Christmas'
   },
   {
     music_name: 'Run Rudolph Run',
     singer: 'Chuck Berry',
-    music_list_id: 2
+    theme: 'Christmas'
   },
   {
     music_name: 'Santa Tell Me',
     singer: 'Ariana Grande',
-    music_list_id: 2
+    theme: 'Christmas'
   },
   {
-    music_name: 'You Make It Feel Like Christmas',
-    singer: 'Gwen Stefani (ft. Blake Shelton)',
-    music_list_id: 2
+    music_name: 'Happy Birthday To You (English ver.)',
+    singer: 'No Name',
+    theme: 'Birthday'
+  },
+  {
+    music_name: 'Peaches ft. Daniel Caesar, Giveon',
+    singer: 'Justin Bieber',
+    theme: 'NightClub'
+  },
+  {
+    music_name: 'Imagine',
+    singer: 'Ariana Grande',
+    theme: 'NightClub'
   },
 ];
 

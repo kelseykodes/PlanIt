@@ -28,3 +28,16 @@ input{
     display:inline;
     align-items: center;
   }
+
+.category-list {
+    display: block;
+    text-align: center;
+}
+.category-list ul li
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
