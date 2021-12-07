@@ -13,7 +13,8 @@ var submitBtn = $('#submitbtn')
 
 function deleteForm(){
     // take them back to the dashboard
-
+    console.log('delete....')
+    location.href = '../views/dashboard.html'; //fix
 }
 
 function searchInputHandler(event){
@@ -22,28 +23,15 @@ function searchInputHandler(event){
     var descriptVal = descriptionEl.val();
     var dateVal =  partyDateEl.val();
     var guestVal = guestNumEl.val();
-    console.log(searchVal);
-    saveForm(searchVal);
-    
+    var parties = [searchVal, descriptVal, dateVal, guestVal];
+    saveForm(parties);
 
-    // create a loop to get all the data on the form
-
-function saveForm(data) {
-    console.log(data);
+function saveForm() {
     var parties = [searchVal, descriptVal, dateVal, guestVal]
-    localStorage.setItem("partyInfo", JSON.stringify(parties));
+        console.log(parties);
+        localStorage.setItem("partyInfo", JSON.stringify(parties));
 
-
-
-    // if (response.ok) {
-    //     response.json().then(function (data) {
-    //       console.log(data);
-    //       var parties = data.results
-    //       localStorage.setItem("partyInfo", JSON.stringify(parties));
-    //     //   displayRecipes(recipes);//Calls function to display recipes
-    //     console.log(parties);
-    //     });
-// }
+    
 };
 }
 
