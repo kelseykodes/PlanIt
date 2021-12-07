@@ -1,8 +1,6 @@
 const sequelize = require('../config/connection');
 const seedActivities = require('./activitiesData');
 const seedMusic = require('./Music');
-const seedMusicList = require('./MusicList');
-const seedTheme = require('./Theme');
 const seedDecoration = require('./decoration');
 const seedFood = require('./food');
 const seedDrink = require('./drink');
@@ -13,12 +11,6 @@ const seedAll = async () => {
 
   await seedActivities();
   console.log('\n----- Activities SEEDED -----\n');
-
-  await seedTheme();
-  console.log('\n----- THEME SEEDED -----\n');
-
-  await seedMusicList();
-  console.log('\n----- MUSICLIST SEEDED -----\n');
   
   await seedMusic();
   console.log('\n----- MUSIC SEEDED -----\n');

@@ -55,3 +55,17 @@ main {
     Overflow-x: scroll; //add horizontal bar option in html
     Overflow-y: scroll; //add vertical bar option in html
     }
+  }
+
+.category-list {
+    display: block;
+    text-align: center;
+}
+.category-list ul li
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+

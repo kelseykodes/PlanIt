@@ -19,13 +19,9 @@ Music.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    music_list_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'musicList',
-        key: 'id',
-        unique: false
-      }
+    theme: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {
