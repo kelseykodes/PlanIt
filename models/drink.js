@@ -11,7 +11,7 @@ Drinks.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    drink_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },

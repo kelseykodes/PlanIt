@@ -1,8 +1,8 @@
-  // recieved an error in the console that 'const loginFormHandler' could be declared twice
+  // recieved an error in the console that 'const l' could be declared twice
   // switch const to var
 var loginFormHandler = async (event) => {
     event.preventDefault();
-  
+    console.log('button works');
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
@@ -14,12 +14,12 @@ var loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to log in.');
       }
     }
-};
+}; 
   // recieved an error in the console that 'const signupFormHandler' could be declared twice
   // switch const to var
 var signupFormHandler = async (event) => {
@@ -46,9 +46,9 @@ var signupFormHandler = async (event) => {
   
   document
     .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    .addEventListener('click', loginFormHandler);
   
   document
     .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+    .addEventListener('click', signupFormHandler);
   
