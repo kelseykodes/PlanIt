@@ -11,6 +11,11 @@ var guestNumEl = $('#guest-numb');
 var deleteBtn = $('#deletebtn')
 var submitBtn = $('#submitbtn')
 
+function deleteForm(){
+    // take them back to the dashboard
+
+}
+
 function searchInputHandler(event){
     event.preventDefault();
     var searchVal = searchInputEl.val();
@@ -19,6 +24,7 @@ function searchInputHandler(event){
     var guestVal = guestNumEl.val();
     console.log(searchVal);
     saveForm(searchVal);
+    
 
     // create a loop to get all the data on the form
 
@@ -40,3 +46,6 @@ function saveForm(data) {
 // }
 };
 }
+
+deleteBtn.on('click',deleteForm);
+submitBtn.on('click',searchInputHandler);
