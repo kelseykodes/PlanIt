@@ -22,7 +22,7 @@ Decoration.init(
         key: 'id',
       },
     },
-    deco_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
