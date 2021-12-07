@@ -17,6 +17,7 @@ function deleteForm(){
     location.href = '../views/dashboard.html'; //fix
 }
 
+// saves the party info to local storage
 function searchInputHandler(event){
     event.preventDefault();
     var searchVal = searchInputEl.val();
@@ -30,10 +31,11 @@ function saveForm() {
     var parties = [searchVal, descriptVal, dateVal, guestVal]
         console.log(parties);
         localStorage.setItem("partyInfo", JSON.stringify(parties));
-
-    
 };
 }
 
+//work on the edit and delete buttons of the card
+
 deleteBtn.on('click',deleteForm);
 submitBtn.on('click',searchInputHandler);
+
