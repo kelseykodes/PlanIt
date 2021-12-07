@@ -23,7 +23,7 @@ Activities.init(
       type: DataTypes.STRING,
       allowNull: false,
     },//quick descripition 
-    minNum_Participants: {
+    minNum_participants: {
       type: DataTypes.STRING,
       allowNull: false,
     },//number of participants required for activity 

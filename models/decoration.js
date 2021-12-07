@@ -14,14 +14,15 @@ Decoration.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    deco_id: {
-      type: DataTypes.INTEGER,
-      //a reference of the `id` of the `Category` that owns this Decoration
-      references: {
-        model: 'category',
-        key: 'id',
-      },
-    },
+    // Edited out b/c we don't have a categories model
+    // deco_id: {
+    //   type: DataTypes.INTEGER,
+    //   //a reference of the `id` of the `Category` that owns this Decoration
+    //   references: {
+    //     model: 'category',
+    //     key: 'id',
+    //   },
+    // },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
