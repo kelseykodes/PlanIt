@@ -12,27 +12,27 @@ User.hasMany(Party, {
 })
 
 Party.hasMany(Food, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
 Party.hasMany(Music, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
 Party.hasMany(Activities, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
 Party.hasMany(Decorations, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
 Party.hasMany(Drinks, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
@@ -40,27 +40,27 @@ Party.hasMany(Drinks, {
 //do the smae for the rest of the party details
 
 Food.belongsToMany(Party, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
 Decorations.belongsToMany(Party, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
 Music.belongsToMany(Party, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
 Drinks.belongsToMany(Party, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
 Activities.belongsToMany(Party, {
-    foreignKey: 'reader_id',
+    foreignKey: 'party_id',
     onDelete: 'CASCADE',
 })
 
