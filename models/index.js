@@ -1,10 +1,10 @@
 const User = require('./User');
 const Music = require('./Music');
-const Activites = require('./activities');
+const Activities = require('./activities');
 const Decorations = require('./decoration');
 const Food = require('./food');
 const Party = require('./Party');
-const Drink = require('./drink'); 
+const Drinks = require('./drink'); 
 
 User.hasMany(Party, {
     include{
@@ -15,17 +15,50 @@ User.hasMany(Party, {
 Party.hasMany(Food, {
 
 })
+
+Party.hasMany(Music, {
+
+})
+
+Party.hasMany(Activities, {
+
+})
+
+Party.hasMany(Decorations, {
+
+})
+
+Party.hasMany(Drinks, {
+
+})
+
+
 //do the smae for the rest of the party details
 
 Food.belongsToMany(Party, {
 
 })
 
-// Do the same for the rest fo the models
+Decorations.belongsToMany(Party, {
+
+})
+
+Music.belongsToMany(Party, {
+
+})
+
+Drinks.belongsToMany(Party, {
+
+})
+
+Activities.belongsToMany(Party, {
+
+})
 
 
 
 
-module.exports = { User, Music };
+
+module.exports = { User, Music, Food, Drinks, Activities, Decorations, Party };
 
 //add primary keys to the tables
