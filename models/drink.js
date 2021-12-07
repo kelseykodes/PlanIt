@@ -23,7 +23,7 @@ Drinks.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    isAlcoholic: {
+    hasAlcohol: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
@@ -32,7 +32,7 @@ Drinks.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dish',
+    modelName: 'drinks',
   }
 );
 
