@@ -24,7 +24,7 @@ function searchInputHandler(event){
 
 function saveForm(data) {
     console.log(data);
-    var parties = data.results
+    var parties = [searchVal, descriptVal, dateVal, guestVal]
     localStorage.setItem("partyInfo", JSON.stringify(parties));
 
 
@@ -37,6 +37,6 @@ function saveForm(data) {
     //     //   displayRecipes(recipes);//Calls function to display recipes
     //     console.log(parties);
     //     });
-}
+// }
 };
 }
