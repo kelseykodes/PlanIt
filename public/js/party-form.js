@@ -37,9 +37,14 @@ function saveForm() {
 //work on the edit and delete buttons of the card
 
 // modal trigger
-$(document).ready(function(){
-    $('.modal').modal();
-  });
+// $(document).ready(function(){
+//     $('.modal').modal();
+//     // var agree = $('party-form.html#!') //to try to get the modal to close
+
+//     // if(agree){
+//     //     modal.close();
+//     // }
+//   });
 
 deleteBtn.on('click',deleteForm);
 submitBtn.on('click',searchInputHandler);

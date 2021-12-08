@@ -34,6 +34,13 @@ Decoration.init(
         isDecimal: true
       }
     },
+    party_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'party',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,

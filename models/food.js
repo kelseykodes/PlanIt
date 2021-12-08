@@ -25,6 +25,13 @@ Food.init(
     has_nuts: {
       type: DataTypes.BOOLEAN,
     },
+    party_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'party',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,

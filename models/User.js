@@ -35,6 +35,13 @@ User.init(
         len: [6],
       },
     },
+    party_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'party',
+        key: 'id',
+      },
+  },
   },
   {
     hooks: {

@@ -31,6 +31,13 @@ Activities.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },//how long will it take in mins
+    party_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'party',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
