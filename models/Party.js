@@ -22,13 +22,13 @@ Party.init(
     date: {
       type: DataTypes.INTEGER, //look up better format for the date
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'user',
+    //     key: 'id',
+    //   },
+    // },
       
   },
   {

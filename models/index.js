@@ -11,6 +11,11 @@ User.hasMany(Party, {
     onDelete: 'CASCADE',
 })
 
+Party.belongsTo(User, {
+    foreignKey: 'party_id',
+    onDelete: 'CASCADE'
+})
+
 Party.hasMany(Food, {
     foreignKey: 'party_id',
     onDelete: 'CASCADE',
@@ -40,28 +45,40 @@ Party.hasMany(Drinks, {
 //do the smae for the rest of the party details
 
 Food.belongsToMany(Party, {
-    foreignKey: 'party_id',
+    through: ''
+        foreignKey: 'party_id',
     onDelete: 'CASCADE',
+
 })
 
+    
+
 Decorations.belongsToMany(Party, {
-    foreignKey: 'party_id',
+    through: {
+        foreignKey: 'party_id',
     onDelete: 'CASCADE',
+    }
 })
 
 Music.belongsToMany(Party, {
-    foreignKey: 'party_id',
+    through: {
+        foreignKey: 'party_id',
     onDelete: 'CASCADE',
+    }
 })
 
 Drinks.belongsToMany(Party, {
-    foreignKey: 'party_id',
+    through: {
+        foreignKey: 'party_id',
     onDelete: 'CASCADE',
+    }
 })
 
 Activities.belongsToMany(Party, {
-    foreignKey: 'party_id',
-    onDelete: 'CASCADE',
+    through: {
+        foreignKey: 'party_id',
+        onDelete: 'CASCADE',
+    }
 })
 
 
