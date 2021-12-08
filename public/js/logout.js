@@ -9,7 +9,12 @@ const logout = async () => {
     } else {
       alert('Failed to log out.');
     }
-  };
+};
   
+const dashboard = async () => {
+  document.location.replace('/dashboard');
+};
+
   document.querySelector('#logout').addEventListener('click', logout);
+  document.querySelector('#dashboard').addEventListener('click', dashboard);
   
