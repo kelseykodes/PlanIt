@@ -33,7 +33,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-// GET route takes usee to party form when logged in
+// GET route takes user to party form when logged in
 router.get('/party-form', async (req, res) => {
   try {
     // Pass serialized data and session flag into template
