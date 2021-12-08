@@ -43,7 +43,7 @@ Activities.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'activities',
+    modelName: 'activity',
   }
 );
 
