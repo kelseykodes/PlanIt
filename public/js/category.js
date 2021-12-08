@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // control add-all button
 
-const checks = document.getElementsByClassName('checkbox');
-const currentList = document.getElementById("current-list");
-const addAll = document.getElementById("addBtn")
+const checks = document.getElementsByClassName('checkbox-music');
+const currentList = document.getElementById("current-music-list");
+const addAll = document.getElementById("addMusicBtn")
 let answer = [];
 
 function getValue(e){
@@ -32,7 +32,7 @@ answer = [];
 addAll.addEventListener('click', getValue);
 
 // control clear-all button
-const clearAll = document.getElementById("clear-all");
+const clearAll = document.getElementById("clear-all-music");
 
 function clearValue(e){
   e.preventDefault();
