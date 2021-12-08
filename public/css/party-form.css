@@ -38,3 +38,14 @@ footer{
 .card-title {
     text-align: center;
 }
+
+.darken-1 {
+    /* border-top-left-radius: 30px;
+    border-top-right-radius: 30px; */
+    border-radius: 30px;
+}
+
+#edges {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
