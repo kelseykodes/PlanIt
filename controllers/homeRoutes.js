@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   }
 });
 
-//TODO: NEED TO TAKE USER TO PARTY DASHBOARD
+// GET route takes user to party dashboard once log in is authenticated
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -33,15 +33,26 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+// GET route takes usee to party form when logged in
+router.get('/party-form', async (req, res) => {
+  try {
+    // Pass serialized data and session flag into template
+    res.render('party-form', {logged_in: true});
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(err);
+  }
+});
 
+
+// If the user is already logged in, redirect the request to party dashboard
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/login');
+    res.redirect('dashboard');
     return;
   }
 
   res.render('login');
 });
 
-module.exports = router;
+module.exports = router; 
