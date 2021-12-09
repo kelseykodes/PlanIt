@@ -50,6 +50,38 @@ router.get('/dashboard', withAuth, async (req, res) => {
 //   }
 // });
 
+const { Food } = require('../models');
+const { Party } = require('../models');
+const { Activities } = require('../models');
+const { Music } = require('../models');
+const { Decoration } = require('../models');
+
+router.get('/party-form', async (req, res) => {
+  try {
+    const dbFoodData = await Party.findAll({
+      include: [
+        {
+          model: Food,
+          attributes: ['name', 'has_nuts'],
+        },
+      ],
+    });
+
+    const parties = dbFoodData.map((party-form) =>
+      party.get({ plain: true })
+    );
+
+    res.render('food', {
+      parties,
+    });
+
+  } catch (err) {
+    console.log(err);
+    res.status(500) 
+    // .json(err);
+  }
+});
+
 
 // GET route takes user to party form when logged in
 router.get('/party-form', async (req, res) => {

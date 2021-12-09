@@ -1,0 +1,30 @@
+{{#each drink as |drink| }}
+<section class="container">
+  <h3 class="drink-name">{{drinks.drink_name}}</h3>
+  {{!-- Should I make a new drink partial? to separate food and drinks? --}}
+  <p> Description: {{drinks.description}} </p>
+  <p> Ingredients: {{drinks.ingredients}} </p>
+  {{#if drinks.hasAlcohol === true}}
+  <p> Does this have alcohol? {{drinks.hasAlcohol}} {{{alcohol_emoji}}}</p>
+  {{#else}}
+  <p> Does this have alcohol? {{drinks.hasAlcohol}}</p>
+  {{/if}}
+  <section class="flex-row justify-center">
+  </section>
+</section>
+{{/each}}
+
+{{!-- mock up partials for party-form quick add --}}
+
+{{#each drinks as |drink| }}
+<section class="container">
+  <h3 class="drink-name">{{drinks.name}}</h3>
+  {{#if drinks.hasNuts}}
+  <p> {{{alcohol_emoji}}} </p>
+  {{#else}}
+  <p> No {{{alcohol_emoji}}}  </p>
+  {{/if}}
+  <section class="flex-row justify-center">
+  </section>
+</section>
+{{/each}}
