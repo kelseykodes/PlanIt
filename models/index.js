@@ -1,90 +1,57 @@
 const User = require('./User');
 const Music = require('./Music');
-const Activities = require('./activities');
-const Decorations = require('./decoration');
-const Food = require('./food');
+const Activities = require('./Activities');
+const Decorations = require('./Decoration');
+const Food = require('./Food');
 const Party = require('./Party');
-const Drinks = require('./drink'); 
+const Drinks = require('./Drink'); 
+const Decoration = require('./Decoration');
 
 User.hasMany(Party, {
-    foreignKey: 'party_id',
-    onDelete: 'CASCADE',
+    foreignKey: 'user_id',
 })
 
 Party.belongsTo(User, {
-    foreignKey: 'party_id',
-    onDelete: 'CASCADE'
+    foreignKey: 'user_id',
 })
 
-Party.hasMany(Food, {
-    foreignKey: 'party_id',
-    onDelete: 'CASCADE',
-})
+// Party.hasMany(Food, {
+//     foreignKey: 'party_id'
+// })
 
-Party.hasMany(Music, {
-    foreignKey: 'party_id',
-    onDelete: 'CASCADE',
-})
+// Party.hasMany(Music, {
+//     foreignKey: 'party_id',
+// })
 
-Party.hasMany(Activities, {
-    foreignKey: 'party_id',
-    onDelete: 'CASCADE',
-})
+// Party.hasMany(Activities, {
+//     foreignKey: 'party_id',
+// })
 
-Party.hasMany(Decorations, {
-    foreignKey: 'party_id',
-    onDelete: 'CASCADE',
-})
+// Party.hasMany(Decoration, {
+//     foreignKey: 'party_id',
+// })
 
-Party.hasMany(Drinks, {
-    foreignKey: 'party_id',
-    onDelete: 'CASCADE',
-})
+// Party.hasMany(Drink, {
+//     foreignKey: 'party_id',
+// })
 
 
-//do the smae for the rest of the party details
+Party.belongsToMany(Food, { through: 'PartyFood', foreignKey: 'party_id' });
+Food.belongsToMany(Party, { through: 'PartyFood', foreginKey: 'food_id' });
 
-Food.belongsToMany(Party, {
-    through: ''
-        foreignKey: 'party_id',
-    onDelete: 'CASCADE',
+Party.belongsToMany(Food, { through: 'PartyFood', foreignKey: 'party_id' });
+Decoration.belongsToMany(Party, { through: 'PartyDecoration', foreginKey: 'decoration_id' });
 
-})
+Party.belongsToMany(Food, { through: 'PartyFood', foreignKey: 'party_id' });
+Activities.belongsToMany(Party, { through: 'PartyActivities', foreginKey: 'activities_id' });
 
-    
+Party.belongsToMany(Food, { through: 'PartyFood', foreignKey: 'party_id' });
+Drink.belongsToMany(Party, { through: 'PartyDrink', foreginKey: 'drink_id' });
 
-Decorations.belongsToMany(Party, {
-    through: {
-        foreignKey: 'party_id',
-    onDelete: 'CASCADE',
-    }
-})
-
-Music.belongsToMany(Party, {
-    through: {
-        foreignKey: 'party_id',
-    onDelete: 'CASCADE',
-    }
-})
-
-Drinks.belongsToMany(Party, {
-    through: {
-        foreignKey: 'party_id',
-    onDelete: 'CASCADE',
-    }
-})
-
-Activities.belongsToMany(Party, {
-    through: {
-        foreignKey: 'party_id',
-        onDelete: 'CASCADE',
-    }
-})
-
-
-
+Party.belongsToMany(Food, { through: 'PartyFood', foreignKey: 'party_id' });
+Music.belongsToMany(Party, { through: 'PartyMusic', foreginKey: 'music_id' });
 
 
 module.exports = { User, Music, Food, Drinks, Activities, Decorations, Party };
 
-//add primary keys to the tables
+
