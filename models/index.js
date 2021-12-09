@@ -28,17 +28,17 @@ Party.belongsToMany(Food, {
 
 Food.belongsToMany(Party, {
     through: 'partyfood',
-    foreignKey: 'food_id' 
+    foreignKey: 'food_id'
 });
 
 Party.belongsToMany(Decoration, {
      through: 'partydecoration',
-      foreignKey: 'party_id' 
+     foreignKey: 'party_id' 
     });
 
 Decoration.belongsToMany(Party, {
      through: 'partydecoration',
-      foreignKey: 'decoration_id'
+     foreignKey: 'decoration_id'
      });
 
 Party.belongsToMany(Activities, {
@@ -48,27 +48,27 @@ Party.belongsToMany(Activities, {
 
 Activities.belongsToMany(Party, {
      through: 'partyactivities',
-      foreignKey: 'activities_id' 
+     foreignKey: 'activities_id' 
     });
 
 Party.belongsToMany(Drink, { 
     through: 'partydrink',
-     foreignKey: 'party_id' 
+    foreignKey: 'party_id' 
     });
 
 Drink.belongsToMany(Party, {
      through: 'partydrink',
-      foreignKey: 'drink_id' 
+     foreignKey: 'drink_id' 
     });
 
 Party.belongsToMany(Music, {
      through: 'partymusic',
-      foreignKey: 'party_id'
+     foreignKey: 'party_id'
      });
 
 Music.belongsToMany(Party, {
      through: 'partymusic',
-      foreignKey: 'music_id'
+     foreignKey: 'music_id'
      });
 
 

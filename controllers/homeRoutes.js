@@ -34,29 +34,21 @@ router.get('/dashboard', withAuth, async (req, res) => {
 });
 
 
-router.get('/party-form', async (req, res) => {
-  try {
-    const { Food } = require('../models');
-    const { Drink } = require('../models');
-    const { Activities } = require('../models');
-    const { Decoration } = require('../models');
-    const { Music } = require('../models');
-    
-    const activityData = await Activities.findAll();
-    const foodData = await Food.findAll();
-    const drinkData = await Drink.findAll();
-
-    const foodItems = foodData.map((project) => project.get({ plain: true }));
-    const drinkItems = drinkData.map((project) => project.get({ plain: true }));
-    // Pass serialized data and session flag into template
-    res.render('party-form', {
-      foodItems, drinkItems, logged_in: req.isAuthenticated()
-    });
-  } catch (err) {
-    res.status(500).json(err);
-    console.log(err);
-  }
-});
+// router.get('/party-form', async (req, res) => {
+//   try {
+//     const foodData = await Food.findAll();
+//     const drinkData = await Drink.findAll();
+//     const foodItems = foodData.map((project) => project.get({ plain: true }));
+//     const drinkItems = drinkData.map((project) => project.get({ plain: true }));
+//     // Pass serialized data and session flag into template
+//     res.render('party-form', {
+//       foodItems, drinkItems, logged_in: req.isAuthenticated()
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//     console.log(err);
+//   }
+// });
 
 
 // GET route takes user to party form when logged in

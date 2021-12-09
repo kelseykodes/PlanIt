@@ -2,6 +2,7 @@
   <html>
     <head>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         {{!-- FIXED PATH TO LINK CSS COORECTLY, ../../ --}}
       <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
@@ -46,13 +47,32 @@
         </ul>
         <main>
             <!-- main page Handlebars-->
-           <div class='change'>
+          <div class='change'>
             {{{body}}}
-            </div> 
+          </div> 
         </main>
                
+          <footer class="page-footer #aed581 light-green lighten-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Planit</h5>
+                    <p class="grey-text text-lighten-4">Your number one party planning app!</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
 
       <!--JavaScript at end of body for optimized loading-->
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <!-- IF USER IS LOGGED IN, WILL RENDER LOGOUT SCRIPT -->
       {{#if logged_in}}
