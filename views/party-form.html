@@ -52,37 +52,94 @@
                     <h4 class="row center">Would you like to add any of the following items?</h4>
                     <div class= "row">
                         <!-- Decorations -->
-                        <div class="col s6 m6 edges">
+                        <div class="col s6 m6">
                             <div class="card blue-grey darken-1">
                             <div class="card-content white-text">
                               <img id="card-imgs" src="../public/image/balloons.png" alt="Decorations">
                                 <span class="card-title">Decorations</span>
-                                <ul>
-                                    <li>Hats</li><li>Candy</li><li>Ballons</li>
-                                </ul>
+                                <!-- the Decoration list added here -->
+                                <ul id="current-decoration-list" style='color: aliceblue; font-size: larger;'></ul>
                             </div>
                             <div class="card-action" id="edges">
-                                <a href="./decorations.html">Edit</a>
                                 <a href="#"><!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                      Quick Add
-                                    </button>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#decorationExampleModal">
+                                    Add Decoration
+                                  </button>
+                                  <button class="waves-effect waves-light btn" id="saveBtnNo1">Save</button>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
+                                    <div class="modal fade" id="decorationExampleModal" tabindex="-1" role="dialog" aria-labelledby="decorationExampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
                                           <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <h5 class="modal-title" id="decorationExampleModalLabel">Decoration</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                               <span aria-hidden="true">&times;</span>
                                             </button>
                                           </div>
                                           <div class="modal-body">
-                                            ...
+                                            <div class='container'>
+                                              <ul class="category-list collapsible expandable col s12 m12">
+                                                  <li class='active'>
+                                                      <!-- name of the category -->
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">cake</i>Birthday</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;' >
+                                                              <p>
+                                                              <label>
+                                                                  <!-- change the value to the name of each item & don't remove <span> tag -->
+                                                                  <input type="checkbox" class="checkbox-decoration" value='Happy Birthday To You (English ver.)'/>
+                                                                  <span style=' font-size: large;'>Happy Birthday To You (English ver.)</span>
+                                                              </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                                  <li class='active'>
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">ac_unit</i>Christmas</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;'>
+                                                              <p>
+                                                              <label>
+                                                                  <input type="checkbox" class="checkbox-decoration" value='All I Want For Christmas Is You'/>
+                                                                  <span style='font-size: large;'>All I Want For Christmas Is You</span>
+                                                              </label>
+                                                              </p>
+                                                              <p>
+                                                                  <label>
+                                                                  <input type="checkbox" class="checkbox-decoration" value='Mistletoe'/>
+                                                                  <span style='font-size: large;'>Mistletoe</span>
+                                                                  </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                                  <li class='active'>
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">whatshot</i>NightClub</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;'>
+                                                              <p>
+                                                              <label>
+                                                                  <input type="checkbox" class="checkbox-decoration" value='Peaches ft. Daniel Caesar, Giveon'/>
+                                                                  <span style='font-size: large;'>Peaches ft. Daniel Caesar, Giveon</span>
+                                                              </label>
+                                                              </p>
+                                                              <p>
+                                                                  <label>
+                                                                  <input type="checkbox" class="checkbox-decoration" value='Imagine'/>
+                                                                  <span style='font-size: large;'>Imagine</span>
+                                                                  </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                              </ul>  
+                                            </div>
+
                                           </div>
                                           <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id='addDecorationBtn'>Add</button>
+                                            <button type="button" class="btn btn-primary" id='clear-all-decoration'>Clear</button>
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
                                           </div>
                                         </div>
                                       </div>
@@ -91,138 +148,312 @@
                             </div>
                         </div>
                         <!-- Music -->
-                        <div class="col s6 m6 edges">
+                        <div class="col s6 m6 ">
                             <div class="card blue-grey darken-1">
-                            <div class="card-content white-text">
-                              <img id="card-imgs" src="../public/image/musical-note.png" alt="musical-note">
-                                <span class="card-title">Music</span>
-                                <ul>
-                                    <li>Merry Holidays</li><li>Happy Birthday</li><li>Coffee</li>
-                                </ul>
-                            </div>
-                            <div class="card-action" id="edges">
-                                <a href="./musicList.html">Edit</a>
-                                <a href="#"><!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                      Quick Add
+                              <div class="card-content white-text">
+                                <img id="card-imgs" src="../public/image/musical-note.png" alt="musical-note">
+                                  <span class="card-title">Music</span>
+                                    <!-- The current Added Items will show here -->
+                                    <ul id="current-music-list" style='color: aliceblue; font-size: larger;'>
+                                      <!-- the music list added here -->
+                                    </ul>
+                                    <!-- origin save button, can be: <button class="waves-effect waves-light btn" id="saveBtn">Save</button>      -->
+                              </div>
+                            
+                              <div class="card-action" id="edges">
+                                  <a href="#"><!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#musicExampleModal">
+                                      Add Music
                                     </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                            
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body">
-                                            ...
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button class="waves-effect waves-light btn" id="saveBtnNo2">Save</button>
+                                      <!-- Modal -->
+                                      <div class="modal fade" id="musicExampleModal" tabindex="-1" role="dialog" aria-labelledby="musicExampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="musicExampleModalLabel">Music</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                              <!-- music list -->
+                                              <div class='container'>
+                                                <ul class="category-list collapsible expandable col s12 m12">
+                                                    <li class='active'>
+                                                        <!-- name of the category -->
+                                                        <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">cake</i>Birthday</div>
+                                                        <div class="collapsible-body">
+                                                            <form action="#" style='text-align: left;' >
+                                                                <p>
+                                                                <label>
+                                                                    <!-- change the value to the name of each item & don't remove <span> tag -->
+                                                                    <input type="checkbox" class="checkbox-music" value='Happy Birthday To You (English ver.)'/>
+                                                                    <span style=' font-size: large;'>Happy Birthday To You (English ver.)</span>
+                                                                </label>
+                                                                </p>
+                                                            </form>
+                                                        </div>
+                                                    </li>
+                                                    <li class='active'>
+                                                        <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">ac_unit</i>Christmas</div>
+                                                        <div class="collapsible-body">
+                                                            <form action="#" style='text-align: left;'>
+                                                                <p>
+                                                                <label>
+                                                                    <input type="checkbox" class="checkbox-music" value='All I Want For Christmas Is You'/>
+                                                                    <span style='font-size: large;'>All I Want For Christmas Is You</span>
+                                                                </label>
+                                                                </p>
+                                                                <p>
+                                                                    <label>
+                                                                    <input type="checkbox" class="checkbox-music" value='Mistletoe'/>
+                                                                    <span style='font-size: large;'>Mistletoe</span>
+                                                                    </label>
+                                                                </p>
+                                                            </form>
+                                                        </div>
+                                                    </li>
+                                                    <li class='active'>
+                                                        <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">whatshot</i>NightClub</div>
+                                                        <div class="collapsible-body">
+                                                            <form action="#" style='text-align: left;'>
+                                                                <p>
+                                                                <label>
+                                                                    <input type="checkbox" class="checkbox-music" value='Peaches ft. Daniel Caesar, Giveon'/>
+                                                                    <span style='font-size: large;'>Peaches ft. Daniel Caesar, Giveon</span>
+                                                                </label>
+                                                                </p>
+                                                                <p>
+                                                                    <label>
+                                                                    <input type="checkbox" class="checkbox-music" value='Imagine'/>
+                                                                    <span style='font-size: large;'>Imagine</span>
+                                                                    </label>
+                                                                </p>
+                                                            </form>
+                                                        </div>
+                                                    </li>
+                                                </ul>  
+                                              </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal" id='addMusicBtn'>Add</button>
+                                              <button type="button" class="btn btn-primary" id='clear-all-music'>Clear</button>
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
                                           </div>
                                         </div>
-                                      </div>
-                                    </div></a>
-                            </div>
+                                      </div></a>
+                              </div>
+
                             </div>
                         </div>
                         <!-- Food/Drinks Card -->
-                        <div class="col s6 m6 edges">
-                            <div class="card blue-grey darken-1">
+                        <div class="col s6 m6">
+                          <div class="card blue-grey darken-1">
+                            <img id="card-imgs" src="../public/image/cheers.png" alt="wine-cheers">
                             <div class="card-content white-text">
-                              <img id="card-imgs" src="../public/image/cheers.png" alt="wine-cheers">
-                                <span class="card-title">Food/Drinks</span>
-                                <ul>
-                                    <li>Wine</li><li>Pizza</li><li>Ice Cream</li>
-                                </ul>
+                                <span class="card-title">Food & Drinks</span>
+                                  <!-- The current Added Items will show here -->
+                                  <ul id="current-fd-list" style='color: aliceblue; font-size: larger;'>
+                                    <!-- the food&drinks list added here -->
+                                  </ul>
                             </div>
+                          
                             <div class="card-action" id="edges">
-                                <a href="./category-layout.html">Edit</a>
                                 <a href="#"><!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                      Quick Add
-                                    </button>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#foodAndDrinksExampleModal">
+                                    Add Food & Drinks
+                                  </button>
+                                  <button class="waves-effect waves-light btn" id="saveBtnNo3">Save</button>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
+                                    <div class="modal fade" id="foodAndDrinksExampleModal" tabindex="-1" role="dialog" aria-labelledby="foodAndDrinksExampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
                                           <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <h5 class="modal-title" id="foodAndDrinksExampleModalLabel">Food & Drinks</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                               <span aria-hidden="true">&times;</span>
                                             </button>
                                           </div>
+
                                           <div class="modal-body">
-                                            ...
+                                            <!-- Food&Drinks list -->
+                                            <div class='container'>
+                                              <ul class="category-list collapsible expandable col s12 m12">
+                                                  <li class='active'>
+                                                      <!-- name of the category -->
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">cake</i>Birthday</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;' >
+                                                              <p>
+                                                              <label>
+                                                                  <!-- change the value to the name of each item & don't remove <span> tag -->
+                                                                  <input type="checkbox" class="checkbox-fd" value='Happy Birthday To You (English ver.)'/>
+                                                                  <span style=' font-size: large;'>Happy Birthday To You (English ver.)</span>
+                                                              </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                                  <li class='active'>
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">ac_unit</i>Christmas</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;'>
+                                                              <p>
+                                                              <label>
+                                                                  <input type="checkbox" class="checkbox-fd" value='All I Want For Christmas Is You'/>
+                                                                  <span style='font-size: large;'>All I Want For Christmas Is You</span>
+                                                              </label>
+                                                              </p>
+                                                              <p>
+                                                                  <label>
+                                                                  <input type="checkbox" class="checkbox-fd" value='Mistletoe'/>
+                                                                  <span style='font-size: large;'>Mistletoe</span>
+                                                                  </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                                  <li class='active'>
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">whatshot</i>NightClub</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;'>
+                                                              <p>
+                                                              <label>
+                                                                  <input type="checkbox" class="checkbox-fd" value='Peaches ft. Daniel Caesar, Giveon'/>
+                                                                  <span style='font-size: large;'>Peaches ft. Daniel Caesar, Giveon</span>
+                                                              </label>
+                                                              </p>
+                                                              <p>
+                                                                  <label>
+                                                                  <input type="checkbox" class="checkbox-fd" value='Imagine'/>
+                                                                  <span style='font-size: large;'>Imagine</span>
+                                                                  </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                              </ul>  
+                                            </div>
+
                                           </div>
                                           <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id='addFdBtn'>Add</button>
+                                            <button type="button" class="btn btn-primary" id='clear-all-fd'>Clear</button>
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
                                           </div>
                                         </div>
                                       </div>
                                     </div></a>
                             </div>
-                            </div>
-                        </div>
+
+                          </div>
+                      </div>
                         <!-- Activities Card -->
-                        <div class="col s6 m6 edges">
-                            <div class="card blue-grey darken-1">
+                        <div class="col s6 m6">
+                          <div class="card blue-grey darken-1">
                             <div class="card-content white-text">
                               <img id="card-imgs" src="../public/image/social.png" alt="social">
                                 <span class="card-title">Activities</span>
-                                <ul>
-                                    <li>Uno</li><li>Scary Movies</li><li>painting</li>
-                                </ul>
+                                  <!-- The current Added Items will show here -->
+                                  <ul id="current-activity-list" style='color: aliceblue; font-size: larger;'>
+                                    <!-- the activities list added here -->
+                                  </ul>
                             </div>
+                          
                             <div class="card-action" id="edges">
-                                <a href="./">Edit</a> 
                                 <a href="#"><!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                      Quick Add
-                                    </button>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#activitiesExampleModal">
+                                    Add Activities
+                                  </button>
+                                  <button class="waves-effect waves-light btn" id="saveBtnNo4">Save</button>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
+                                    <div class="modal fade" id="activitiesExampleModal" tabindex="-1" role="dialog" aria-labelledby="activitiesExampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
                                           <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Add Activity</h5>
+                                            <h5 class="modal-title" id="activitiesExampleModalLabel">Activities</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                               <span aria-hidden="true">&times;</span>
                                             </button>
                                           </div>
+
                                           <div class="modal-body">
-                                            <!-- added to have the data as options -->
-                                            <!-- <div>
-                                              <label>Select Activity
-                                                <select id='day'>
-                                                  <option value="Monday">heyyyy</option>
-                                                  <option value="Tuesday">hi</option>
-                                                  <option value="Wednesday">hi</option>
-                                                  <option value="Thursday">hi</option>
-                                                  <option value="Friday">hi</option>
-                                                  <option value="Saturday">hi</option>
-                                                  <option value="Sunday">hi</option>
-                                                </select>
-                                              </label>
-                                            </div> -->
+                                            <!-- activities list -->
+                                            <div class='container'>
+                                              <ul class="category-list collapsible expandable col s12 m12">
+                                                  <li class='active'>
+                                                      <!-- name of the category -->
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">cake</i>Birthday</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;' >
+                                                              <p>
+                                                              <label>
+                                                                  <!-- change the value to the name of each item & don't remove <span> tag -->
+                                                                  <input type="checkbox" class="checkbox-activity" value='Happy Birthday To You (English ver.)'/>
+                                                                  <span style=' font-size: large;'>Happy Birthday To You (English ver.)</span>
+                                                              </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                                  <li class='active'>
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">ac_unit</i>Christmas</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;'>
+                                                              <p>
+                                                              <label>
+                                                                  <input type="checkbox" class="checkbox-activity" value='All I Want For Christmas Is You'/>
+                                                                  <span style='font-size: large;'>All I Want For Christmas Is You</span>
+                                                              </label>
+                                                              </p>
+                                                              <p>
+                                                                  <label>
+                                                                  <input type="checkbox" class="checkbox-activity" value='Mistletoe'/>
+                                                                  <span style='font-size: large;'>Mistletoe</span>
+                                                                  </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                                  <li class='active'>
+                                                      <div class="collapsible-header teal lighten-2" style='color: aliceblue; font-size: larger;'><i class="material-icons">whatshot</i>NightClub</div>
+                                                      <div class="collapsible-body">
+                                                          <form action="#" style='text-align: left;'>
+                                                              <p>
+                                                              <label>
+                                                                  <input type="checkbox" class="checkbox-activity" value='Peaches ft. Daniel Caesar, Giveon'/>
+                                                                  <span style='font-size: large;'>Peaches ft. Daniel Caesar, Giveon</span>
+                                                              </label>
+                                                              </p>
+                                                              <p>
+                                                                  <label>
+                                                                  <input type="checkbox" class="checkbox-activity" value='Imagine'/>
+                                                                  <span style='font-size: large;'>Imagine</span>
+                                                                  </label>
+                                                              </p>
+                                                          </form>
+                                                      </div>
+                                                  </li>
+                                              </ul>  
+                                            </div>
+
                                           </div>
                                           <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id='addActivityBtn'>Add</button>
+                                            <button type="button" class="btn btn-primary" id='clear-all-activities'>Clear</button>
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
                                           </div>
                                         </div>
                                       </div>
                                     </div></a>
                             </div>
-                            </div>
-                        </div>
-                    </div>
 
+                          </div>
+                      </div>
                     <!-- Delete -->
                     <button id='deletebtn' class="left btn waves-effect waves-light" type="delete" name="action">delete
                         <i class="material-icons right">delete</i>
@@ -258,6 +489,8 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <!--  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='../public/js/category.js'></script>
+    <!-- <script src="party-form.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
