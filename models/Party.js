@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Food extends Model {}
+class Party extends Model {}
 
-Food.init(
+Party.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -19,26 +19,24 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    ingredients: {
-      type: DataTypes.STRING,
+    date: {
+      type: DataTypes.INTEGER, //look up better format for the date
     },
-    has_nuts: {
-      type: DataTypes.BOOLEAN,
-    },
-    party_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'party',
+        model: 'user',
         key: 'id',
       },
     },
+      
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'food',
+    modelName: 'party',
   }
 );
 
-module.exports = Food;
+module.exports = Party;

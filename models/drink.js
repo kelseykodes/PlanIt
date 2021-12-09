@@ -27,12 +27,19 @@ Drinks.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    party_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'party',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'drinks',
+    modelName: 'drink',
   }
 );
 

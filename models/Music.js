@@ -22,7 +22,14 @@ Music.init(
     theme: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    party_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'party',
+        key: 'id',
+      },
+  },
   },
   {
     sequelize,

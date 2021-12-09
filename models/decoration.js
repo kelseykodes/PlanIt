@@ -14,14 +14,6 @@ Decoration.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    deco_id: {
-      type: DataTypes.INTEGER,
-      //a reference of the `id` of the `Category` that owns this Decoration
-      references: {
-        model: 'category',
-        key: 'id',
-      },
-    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,6 +24,13 @@ Decoration.init(
       validate: {
         isDecimal: true
       }
+    },
+    party_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'party',
+        key: 'id',
+      },
     },
   },
   {

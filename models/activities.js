@@ -23,7 +23,7 @@ Activities.init(
       type: DataTypes.STRING,
       allowNull: false,
     },//quick descripition 
-    minNum_Participants: {
+    minNum_participants: {
       type: DataTypes.STRING,
       allowNull: false,
     },//number of participants required for activity 
@@ -31,12 +31,19 @@ Activities.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },//how long will it take in mins
+    party_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'party',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'activities',
+    modelName: 'activity',
   }
 );
 
