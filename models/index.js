@@ -22,53 +22,53 @@ Party.belongsTo(User, {
 
 
 Party.belongsToMany(Food, {
-    through: 'PartyFood',
+    through: 'partyfood',
     foreignKey: 'party_id' 
 });
 
 Food.belongsToMany(Party, {
-    through: 'PartyFood',
+    through: 'partyfood',
     foreginKey: 'food_id' 
 });
 
-Party.belongsToMany(Food, {
-     through: 'PartyDecoration',
-      foreignKey: 'party_id' 
+Party.belongsToMany(Decoration, {
+     through: 'partydecoration',
+     foreignKey: 'party_id' 
     });
 
 Decoration.belongsToMany(Party, {
-     through: 'PartyDecoration',
-      foreginKey: 'decoration_id'
+     through: 'partydecoration',
+     foreignKey: 'decoration_id'
      });
 
-Party.belongsToMany(Food, {
-     through: 'PartyActivities',
+Party.belongsToMany(Activities, {
+     through: 'partyactivities',
       foreignKey: 'party_id'
      });
 
 Activities.belongsToMany(Party, {
-     through: 'PartyActivities',
-      foreginKey: 'activities_id' 
+     through: 'partyactivities',
+     foreignKey: 'activities_id' 
     });
 
-Party.belongsToMany(Food, { 
-    through: 'PartyDrink',
-     foreignKey: 'party_id' 
+Party.belongsToMany(Drink, { 
+    through: 'partydrink',
+    foreignKey: 'party_id' 
     });
 
 Drink.belongsToMany(Party, {
-     through: 'PartyDrink',
-      foreginKey: 'drink_id' 
+     through: 'partydrink',
+     foreignKey: 'drink_id' 
     });
 
-Party.belongsToMany(Food, {
-     through: 'PartyMusic',
-      foreignKey: 'party_id'
+Party.belongsToMany(Music, {
+     through: 'partymusic',
+     foreignKey: 'party_id'
      });
 
 Music.belongsToMany(Party, {
-     through: 'PartyMusic',
-      foreginKey: 'music_id'
+     through: 'partymusic',
+     foreignKey: 'music_id'
      });
 
 
