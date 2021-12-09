@@ -11,7 +11,7 @@ const PartyDrink = require('./PartyDrink');
 const PartyFood = require('./PartyActivities');
 const PartyMusic = require('./PartyMusic');
 
-
+// one to many relationship
 User.hasMany(Party, {
     foreignKey: 'user_id',
 })
@@ -20,55 +20,55 @@ Party.belongsTo(User, {
     foreignKey: 'user_id',
 })
 
-
+// establishing the many to many relationships
 Party.belongsToMany(Food, {
-    through: 'PartyFood',
+    through: 'partyfood',
     foreignKey: 'party_id' 
 });
 
 Food.belongsToMany(Party, {
-    through: 'PartyFood',
-    foreginKey: 'food_id' 
+    through: 'partyfood',
+    foreignKey: 'food_id' 
 });
 
-Party.belongsToMany(Food, {
-     through: 'PartyDecoration',
+Party.belongsToMany(Decoration, {
+     through: 'partydecoration',
       foreignKey: 'party_id' 
     });
 
 Decoration.belongsToMany(Party, {
-     through: 'PartyDecoration',
-      foreginKey: 'decoration_id'
+     through: 'partydecoration',
+      foreignKey: 'decoration_id'
      });
 
-Party.belongsToMany(Food, {
-     through: 'PartyActivities',
+Party.belongsToMany(Activities, {
+     through: 'partyactivities',
       foreignKey: 'party_id'
      });
 
 Activities.belongsToMany(Party, {
-     through: 'PartyActivities',
-      foreginKey: 'activities_id' 
+     through: 'partyactivities',
+      foreignKey: 'activities_id' 
     });
 
-Party.belongsToMany(Food, { 
-    through: 'PartyDrink',
+Party.belongsToMany(Drink, { 
+    through: 'partydrink',
      foreignKey: 'party_id' 
     });
 
 Drink.belongsToMany(Party, {
-     through: 'PartyDrink',
-      foreginKey: 'drink_id' 
+     through: 'partydrink',
+      foreignKey: 'drink_id' 
     });
 
-Party.belongsToMany(Food, {
-     through: 'PartyMusic',
+Party.belongsToMany(Music, {
+     through: 'partymusic',
       foreignKey: 'party_id'
      });
 
 Music.belongsToMany(Party, {
-     through: 'PartyMusic',
-      foreginKey: 'music_id'
+     through: 'partymusic',
+      foreignKey: 'music_id'
      });
 
 
