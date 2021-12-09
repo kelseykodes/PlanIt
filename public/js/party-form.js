@@ -1,4 +1,4 @@
-console.log("hey")
+
 // function to get data from other pages
 // function for the submit button
 // function for all the other buttons 
@@ -34,19 +34,17 @@ function saveForm() {
 };
 }
 
-//work on the edit and delete buttons of the card
-
-// modal trigger
-// $(document).ready(function(){
-//     $('.modal').modal();
-//     // var agree = $('party-form.html#!') //to try to get the modal to close
-
-//     // if(agree){
-//     //     modal.close();
-//     // }
-//   });
+var saveBtn3 = $('#saveBtnNo3');
+function saveForm(event) {
+    console.log('HElllooooooo')
+    event.preventDefault();
+    
+}
 
 deleteBtn.on('click',deleteForm);
 submitBtn.on('click',searchInputHandler);
+saveBtn3.on('click', saveForm);
+
+
 
 
