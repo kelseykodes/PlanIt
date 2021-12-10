@@ -1,71 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-/* html{ */
-    /* background-image:url('#'); */
-    /* background-size: cover; */
-      
-/* } */
-
-canvas{
-    z-index: 2;
-}
 
 body {
-    font-family:'Architects Daughter', sans-serif, cursive;
-    background-color: black; 
-    color: white;
-    /* background-image:url('../src-music/musicListGeneratorPage/1NYOYWAsYF_small.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh; */
+    background-color: teal;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
-
-input{
+.welcome {
+    text-align: center;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
 }
-
-.login-card {
-    display:inline;
-    align-items: center;
-}
-
-  /* Party Details CSS */
-  /* ? Should I make a separate file for the party details page? */
-
-main {
-    margin: 30px;
-}
-
-.container {
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#decorations, #music, #activities, #food  {
-    flex-direction: row;
-}
-
-.card-title {
-    color: black;
-}
-
-/* scroll bar for the overflow in the party details partials */
-{
-    Overflow-x: scroll; //add horizontal bar option in html
-    Overflow-y: scroll; //add vertical bar option in html
-    }
-  }
-
-.category-list {
-    display: block;
+#title{
     text-align: center;
 }
-.category-list ul li
-{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+main {
+    flex: 1 0 auto;
 }
 
+footer{
+    background-color: #aed581;
+}
+#container1{
+    background-color: teal;
+    position: center;
+    padding: 60px;
+    margin: 60px;
+}
+#formContainer{
+    background-color: teal;
+    position: center;
+    padding: 60px;
+    margin: 60px;
+}

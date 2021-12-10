@@ -22,11 +22,10 @@ router.get('/dashboard', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       // include: [{ model: Party }],
     });
-
     const user = userData.get({ plain: true });
     res.render('dashboard', {
       ...user,
-      logged_in: true
+      logged_in: true, 
     }); 
   } catch (err) {
     res.status(500).json(err);
@@ -43,7 +42,7 @@ router.get('/party-form', async (req, res) => {
     console.log(err);
   }
 });
-
+// Awaits needed and data need (MD-const dec = decdata.map)- serz. foodz = foo
 
 // If the user is already logged in, redirect the request to party dashboard
 router.get('/login', (req, res) => {
@@ -55,9 +54,4 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-<<<<<<< HEAD
-module.exports = router;
-
-=======
 module.exports = router; 
->>>>>>> 91e5c86fa6fc1f3153044425824011814c685ff9
