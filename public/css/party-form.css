@@ -27,18 +27,21 @@ footer{
     margin: 60px;
 }
 
+/* centering the cards */
 #card-imgs {
     height: 50%;
     width: 50%;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     display: block;
+    margin-top: 0px;
 }
 
 .card-title {
     text-align: center;
 }
 
+/* Adding the rounded edges to the cards  */
 .darken-1 {
     border-radius: 30px;
 }
@@ -46,4 +49,14 @@ footer{
 #edges {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+}
+
+/*  Adding the scroll feature */
+.scroll-feat::-webkit-scrollbar {
+    width: 20px;
+}
+
+.scroll-feat::-webkit-scrollbar-thumb{
+    background: red;
+    border-radius: 10px;
 }

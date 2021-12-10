@@ -35,7 +35,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-
+//Reagin's attempt
 // router.get('/party-form', async (req, res) => {
 //   try {
 //     const foodData = await Food.findAll();
@@ -51,6 +51,48 @@ router.get('/dashboard', withAuth, async (req, res) => {
 //     console.log(err);
 //   }
 // });
+
+
+//new code
+// const { Food } = require('../models');
+// const { Party } = require('../models');
+// const { Activities } = require('../models');
+// const { Music } = require('../models');
+// const { Decoration } = require('../models');
+
+// router.get('/party-form', async (req, res) => {
+//   try {
+//     const dbFoodData = await Party.findAll({
+//       include: [
+//         {
+//           model: Food,
+//           attributes: ['name', 'has_nuts'],
+//         },
+//       ],
+//     });
+
+//     const parties = dbFoodData.map((party-form) =>
+//       party.get({ plain: true })
+//     );
+
+//     res.render('food', {
+//       parties,
+//     });
+
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500) 
+//     // .json(err);
+//   }
+// });
+// var nameVal = $(#name)
+// var DescriptVal = $("#descript")
+// var formVal = $("#form")
+
+// app.get('/party-form', function(req, res){
+//   res.send({ form-info: formVal });
+// });
+//End of Reagin's attmept
 
 
 // GET route takes user to party form when logged in
