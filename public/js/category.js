@@ -248,30 +248,42 @@ saveBtnNo4.addEventListener('click', generateActivityAnswer);
 
 // Add party details to the dashboard
 
-const newFormHandler = async (event) => {
-event.preventDefault();
+const submitFormHandler = async (event) => {
+  event.preventDefault();
+  const name = document.querySelector('#party-name').value.trim();
+  // const partydate = document.querySelector('#party-date').value;
+  const description = document.querySelector('#party-description').value.trim();
 
-const name = document.querySelector('#name').value.trim();
-const date = document.querySelector('#date').value.trim();
-const description = document.querySelector('#description').value.trim();
-
-
-if (name && date && description) {
-  const response = await fetch(`/api/parties`, {
-    method: 'POST',
-    body: JSON.stringify({name, description, date}),
-    
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  if (response.ok) {
-    document.location.replace('dashboard');
-  } else {
-    alert('Failed to create project');
+  if (name && description) {
+    const response = await fetch(`/api/parties`, {
+      method: 'POST',
+      body: JSON.stringify({name, description}),
+      
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    console.log(response.ok);
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert('Failed to create project');
+    }
   }
-}
 };
-
 const submitBtn = document.querySelector('#submit-party');
-submitBtn.addEventListener('click', newFormHandler);
+submitBtn.addEventListener('click', submitFormHandler);
+
+
+
+
+// TEST BUTTON
+// const testPage = async (event) => {
+//   event.preventDefault();
+//       document.location.replace('/party-form');
+//       console.log('is it working');
+  
+// };
+
+// const addBtn = document.getElementById('#test');
+// addBtn.addEventListener('click', testPage);

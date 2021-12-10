@@ -1,4 +1,3 @@
-
 var confetti = {
 	maxCount: 150,		//set max confetti count
 	speed: 2,			//set the particle animation speed
@@ -212,6 +211,3 @@ var confetti = {
 		}
 	}
 })();
-
-// code ffrom https://www.youtube.com/watch?v=quSR_ZrVz6Y&t=44s
-// dont forget to credit him
