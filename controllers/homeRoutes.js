@@ -107,6 +107,30 @@ router.get('/party-form', async (req, res) => {
   }
 });
 
+router.get('/dashboard', async (req, res) => {
+  try {
+    console.log('Start fetch')
+    const partyData = await Party.findAll({
+      include: [
+        {
+          model: User,
+          attributes:['username','email'],
+        },
+      ],
+    });
+    console.log('Start parties');
+    const parties = partyData.map((party)=> party.get({plain: true}));
+    console.log(parties);
+    render();
+    res.render('dashboard',{
+      parties,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 // If the user is already logged in, redirect the request to party dashboard
 router.get('/login', (req, res) => {

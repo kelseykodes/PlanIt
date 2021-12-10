@@ -213,5 +213,6 @@ var confetti = {
 	}
 })();
 
-// code ffrom https://www.youtube.com/watch?v=quSR_ZrVz6Y&t=44s
+// confetti code from https://www.youtube.com/watch?v=quSR_ZrVz6Y&t=44s
 // dont forget to credit him
+// https://github.com/CoderZ90/confetti/blob/main/confetti.js

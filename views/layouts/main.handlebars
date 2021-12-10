@@ -81,7 +81,24 @@
       {{!-- IF USER IS NOT LOGGED IN, WILL RENDER LOGIN SCRIPT --}}
        <script src="js/login.js"></script>
        {{/if}}
-       {{{_sections.script}}}
+       {{!-- {{{_sections.script}}}  COMMENTED OUT --}} 
+
+       {{!-- confetti  --}}
+        {{!-- <script src="js/confetti.js"></script>
+        <script> 
+        const start = () => {
+          setTimeout(function(){
+            confetti.start();
+          }, 1000)}
+
+        const stop = () => {
+          setTimeout(function(){
+            confetti.stop();
+          },4000)}
+          start();
+          stop();
+          console.log(working)
+        </script> --}}
     </body>
   </html>
         
