@@ -19,9 +19,10 @@ Party.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    date: {
-      type: DataTypes.INTEGER, //look up better format for the date
-    },
+    // partydate: {
+    //   type: DataTypes.STRING, 
+    //   allowNull: true,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
