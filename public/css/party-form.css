@@ -46,7 +46,7 @@ footer{
     border-radius: 30px;
 }
 
-#edges {
+#edges, .card-action {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
