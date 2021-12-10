@@ -4,19 +4,22 @@
         <div class="row">
             <div class="col s4 m4">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Party 1.jpeg">
-                        <span class="card-title">Kelsey's Birthday</span>
+                    {{#each party as |party| }}
+                    <div class="row mb-4 project">
+                        <div class="col-md-5">
+                            <h2>
+                            <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+                            <a href="/party-form/{{party.id}}">{{party.name}}</a>
+                            </h2>
+                            <p>{{party.date}}</p>
+                            <p>Created by {{party.user.name}}</p>
+
+                        </div>
+                        <div class="col-md-7">
+                            <p>{{party.description}}</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                            because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <!--If we click here it should take us to a page and or remove the it -->
-                        <a href="#">Edit</a>
-                        <a href="#">Delete</a>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
             <div class="col s4 m4">
@@ -95,7 +98,3 @@
             </div>
         </div>
     </main>
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="dashboard.js"></script>
-    

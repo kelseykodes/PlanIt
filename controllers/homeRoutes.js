@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { Party, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -15,6 +15,8 @@ router.get('/', (req, res) => {
 });
 
 // GET route takes user to party dashboard once log in is authenticated
+
+// need to pass all the parties here
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -84,6 +86,7 @@ router.get('/party-form', async (req, res) => {
 
 
 // GET route takes user to party form when logged in
+//  need to make it as /party-form/:id
 router.get('/party-form', async (req, res) => {
   try {
     // Pass serialized data and session flag into template

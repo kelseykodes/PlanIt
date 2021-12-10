@@ -1,8 +1,8 @@
 // control the dropdown menu
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible.expandable');
-    M.Collapsible.init(elems, {accordion: false});
-  });
+  var elems = document.querySelectorAll('.collapsible.expandable');
+  M.Collapsible.init(elems, {accordion: false});
+});
 
 
 // Decoration: 
@@ -13,21 +13,21 @@ const addAllDecoration = document.getElementById("addDecorationBtn")
 let decorationAnswer = [];
 
 function getDecorationValue(e){
-  e.preventDefault();
-  currentDecorationList.innerHTML = " ";
-  for(i=0;i<checksOfDecoration.length; i++){
-    if(checksOfDecoration[i].checked == true){
-        decorationAnswer.push(checksOfDecoration[i].value);  
-      }
-  }
-  for(j=0;j<decorationAnswer.length; j++){
-    let li = document.createElement("li");
-    li.innerHTML = decorationAnswer[j];
-    currentDecorationList.appendChild(li);
-  }  
-  console.log(decorationAnswer);
-  storeTheSelection = decorationAnswer;
-  decorationAnswer = [];
+e.preventDefault();
+currentDecorationList.innerHTML = " ";
+for(i=0;i<checksOfDecoration.length; i++){
+  if(checksOfDecoration[i].checked == true){
+      decorationAnswer.push(checksOfDecoration[i].value);  
+    }
+}
+for(j=0;j<decorationAnswer.length; j++){
+  let li = document.createElement("li");
+  li.innerHTML = decorationAnswer[j];
+  currentDecorationList.appendChild(li);
+}  
+console.log(decorationAnswer);
+storeTheSelection = decorationAnswer;
+decorationAnswer = [];
 }  
 
 addAllDecoration.addEventListener('click', getDecorationValue);
@@ -36,14 +36,14 @@ addAllDecoration.addEventListener('click', getDecorationValue);
 const clearAll = document.getElementById("clear-all-decoration");
 
 function clearDecorationValue(e){
-    e.preventDefault();
-    for(i=0;i<checksOfDecoration.length; i++){
-      if(checksOfDecoration[i].checked == true){
-        checksOfDecoration[i].checked = false;
-        // change decorationAnswer[]
-      }
-      currentDecorationList.innerHTML = " ";
+  e.preventDefault();
+  for(i=0;i<checksOfDecoration.length; i++){
+    if(checksOfDecoration[i].checked == true){
+      checksOfDecoration[i].checked = false;
+      // change decorationAnswer[]
     }
+    currentDecorationList.innerHTML = " ";
+  }
 }
 
 clearAll.addEventListener('click', clearDecorationValue);
@@ -54,15 +54,15 @@ const saveBtnNo1 = document.getElementById("saveBtnNo1");
 let finalDecorationAnswer = [];
 
 const generateDecorationAnswer = (e) =>{
-  e.preventDefault();
-  // console.log(currentDecorationList.children[0].innerHTML);
-  for (i=0; i<currentDecorationList.childElementCount; i++){
-    finalDecorationAnswer.push(currentDecorationList.children[i].innerHTML);
-  }
-  console.log(finalDecorationAnswer);
-  return finalDecorationAnswer;
-  // back to the front page
-  // window location changed
+e.preventDefault();
+// console.log(currentDecorationList.children[0].innerHTML);
+for (i=0; i<currentDecorationList.childElementCount; i++){
+  finalDecorationAnswer.push(currentDecorationList.children[i].innerHTML);
+}
+console.log(finalDecorationAnswer);
+return finalDecorationAnswer;
+// back to the front page
+// window location changed
 }
 
 saveBtnNo1.addEventListener('click', generateDecorationAnswer);
@@ -76,21 +76,21 @@ const addAllMusic = document.getElementById("addMusicBtn")
 let musicAnswer = [];
 
 function getMusicValue(e){
-  e.preventDefault();
-  currentMusicList.innerHTML = " ";
-  for(i=0;i<checksOfMusic.length; i++){
-    if(checksOfMusic[i].checked == true){
-        musicAnswer.push(checksOfMusic[i].value);  
-      }
-  }
-  for(j=0;j<musicAnswer.length; j++){
-    let li = document.createElement("li");
-    li.innerHTML = musicAnswer[j];
-    currentMusicList.appendChild(li);
-  }  
-  console.log(musicAnswer);
-  storeTheSelection = musicAnswer;
-  musicAnswer = [];
+e.preventDefault();
+currentMusicList.innerHTML = " ";
+for(i=0;i<checksOfMusic.length; i++){
+  if(checksOfMusic[i].checked == true){
+      musicAnswer.push(checksOfMusic[i].value);  
+    }
+}
+for(j=0;j<musicAnswer.length; j++){
+  let li = document.createElement("li");
+  li.innerHTML = musicAnswer[j];
+  currentMusicList.appendChild(li);
+}  
+console.log(musicAnswer);
+storeTheSelection = musicAnswer;
+musicAnswer = [];
 }  
 
 addAllMusic.addEventListener('click', getMusicValue);
@@ -99,14 +99,14 @@ addAllMusic.addEventListener('click', getMusicValue);
 const clearAllMusic = document.getElementById("clear-all-music");
 
 function clearMusicValue(e){
-    e.preventDefault();
-    for(i=0;i<checksOfMusic.length; i++){
-      if(checksOfMusic[i].checked == true){
-        checksOfMusic[i].checked = false;
-        // change musicAnswer[]
-      }
-      currentMusicList.innerHTML = " ";
+  e.preventDefault();
+  for(i=0;i<checksOfMusic.length; i++){
+    if(checksOfMusic[i].checked == true){
+      checksOfMusic[i].checked = false;
+      // change musicAnswer[]
     }
+    currentMusicList.innerHTML = " ";
+  }
 }
 
 clearAllMusic.addEventListener('click', clearMusicValue);
@@ -117,13 +117,13 @@ const saveBtnNo2 = document.getElementById("saveBtnNo2");
 let finalMusicAnswer = [];
 
 const generateMusicAnswer = (e) =>{
-  e.preventDefault();
-  for (i=0; i<currentMusicList.childElementCount; i++){
-    finalMusicAnswer.push(currentMusicList.children[i].innerHTML);
-  }
-  console.log(finalMusicAnswer);
-  return finalMusicAnswer;
-  
+e.preventDefault();
+for (i=0; i<currentMusicList.childElementCount; i++){
+  finalMusicAnswer.push(currentMusicList.children[i].innerHTML);
+}
+console.log(finalMusicAnswer);
+return finalMusicAnswer;
+
 }
 
 saveBtnNo2.addEventListener('click', generateMusicAnswer);
@@ -136,21 +136,21 @@ const addAllFd = document.getElementById("addFdBtn")
 let fdAnswer = [];
 
 function getFdValue(e){
-  e.preventDefault();
-  currentFdList.innerHTML = " ";
-  for(i=0;i<checksOfFd.length; i++){
-    if(checksOfFd[i].checked == true){
-        fdAnswer.push(checksOfFd[i].value);  
-      }
-  }
-  for(j=0;j<fdAnswer.length; j++){
-    let li = document.createElement("li");
-    li.innerHTML = fdAnswer[j];
-    currentFdList.appendChild(li);
-  }  
-  console.log(fdAnswer);
-  storeTheSelection = fdAnswer;
-  fdAnswer = [];
+e.preventDefault();
+currentFdList.innerHTML = " ";
+for(i=0;i<checksOfFd.length; i++){
+  if(checksOfFd[i].checked == true){
+      fdAnswer.push(checksOfFd[i].value);  
+    }
+}
+for(j=0;j<fdAnswer.length; j++){
+  let li = document.createElement("li");
+  li.innerHTML = fdAnswer[j];
+  currentFdList.appendChild(li);
+}  
+console.log(fdAnswer);
+storeTheSelection = fdAnswer;
+fdAnswer = [];
 }  
 
 addAllFd.addEventListener('click', getFdValue);
@@ -159,14 +159,14 @@ addAllFd.addEventListener('click', getFdValue);
 const clearAllFd = document.getElementById("clear-all-fd");
 
 function clearFdValue(e){
-    e.preventDefault();
-    for(i=0;i<checksOfFd.length; i++){
-      if(checksOfFd[i].checked == true){
-        checksOfFd[i].checked = false;
-        // change fdAnswer[]
-      }
-      currentFdList.innerHTML = " ";
+  e.preventDefault();
+  for(i=0;i<checksOfFd.length; i++){
+    if(checksOfFd[i].checked == true){
+      checksOfFd[i].checked = false;
+      // change fdAnswer[]
     }
+    currentFdList.innerHTML = " ";
+  }
 }
 
 clearAllFd.addEventListener('click', clearFdValue);
@@ -177,12 +177,12 @@ const saveBtnNo3 = document.getElementById("saveBtnNo3");
 let finalFdAnswer = [];
 
 const generateFdAnswer = (e) =>{
-  e.preventDefault();
-  for (i=0; i<currentFdList.childElementCount; i++){
-    finalFdAnswer.push(currentFdList.children[i].innerHTML);
-  }
-  console.log(finalFdAnswer);
-  return finalFdAnswer;
+e.preventDefault();
+for (i=0; i<currentFdList.childElementCount; i++){
+  finalFdAnswer.push(currentFdList.children[i].innerHTML);
+}
+console.log(finalFdAnswer);
+return finalFdAnswer;
 }
 
 saveBtnNo3.addEventListener('click', generateFdAnswer);
@@ -195,21 +195,21 @@ const addAllActivities = document.getElementById("addActivityBtn")
 let activityAnswer = [];
 
 function getActivityValue(e){
-  e.preventDefault();
-  currentActivityList.innerHTML = " ";
-  for(i=0;i<checksOfActivity.length; i++){
-    if(checksOfActivity[i].checked == true){
-        activityAnswer.push(checksOfActivity[i].value);  
-      }
-  }
-  for(j=0;j<activityAnswer.length; j++){
-    let li = document.createElement("li");
-    li.innerHTML = activityAnswer[j];
-    currentActivityList.appendChild(li);
-  }  
-  console.log(activityAnswer);
-  storeTheSelection = activityAnswer;
-  activityAnswer = [];
+e.preventDefault();
+currentActivityList.innerHTML = " ";
+for(i=0;i<checksOfActivity.length; i++){
+  if(checksOfActivity[i].checked == true){
+      activityAnswer.push(checksOfActivity[i].value);  
+    }
+}
+for(j=0;j<activityAnswer.length; j++){
+  let li = document.createElement("li");
+  li.innerHTML = activityAnswer[j];
+  currentActivityList.appendChild(li);
+}  
+console.log(activityAnswer);
+storeTheSelection = activityAnswer;
+activityAnswer = [];
 }  
 
 addAllActivities.addEventListener('click', getActivityValue);
@@ -218,14 +218,14 @@ addAllActivities.addEventListener('click', getActivityValue);
 const clearAllActivities = document.getElementById("clear-all-activities");
 
 function clearActivityValue(e){
-    e.preventDefault();
-    for(i=0;i<checksOfActivity.length; i++){
-      if(checksOfActivity[i].checked == true){
-        checksOfActivity[i].checked = false;
-        // change activityAnswer[]
-      }
-      currentActivityList.innerHTML = " ";
+  e.preventDefault();
+  for(i=0;i<checksOfActivity.length; i++){
+    if(checksOfActivity[i].checked == true){
+      checksOfActivity[i].checked = false;
+      // change activityAnswer[]
     }
+    currentActivityList.innerHTML = " ";
+  }
 }
 
 clearAllActivities.addEventListener('click', clearActivityValue);
@@ -236,12 +236,42 @@ const saveBtnNo4 = document.getElementById("saveBtnNo4");
 let finalActivitesAnswer = [];
 
 const generateActivityAnswer = (e) =>{
-  e.preventDefault();
-  for (i=0; i<currentActivityList.childElementCount; i++){
-    finalActivitesAnswer.push(currentActivityList.children[i].innerHTML);
-  }
-  console.log(finalActivitesAnswer);
-  return finalActivitesAnswer;
+e.preventDefault();
+for (i=0; i<currentActivityList.childElementCount; i++){
+  finalActivitesAnswer.push(currentActivityList.children[i].innerHTML);
+}
+console.log(finalActivitesAnswer);
+return finalActivitesAnswer;
 }
 
 saveBtnNo4.addEventListener('click', generateActivityAnswer);
+
+// Add party details to the dashboard
+
+const newFormHandler = async (event) => {
+event.preventDefault();
+
+const name = document.querySelector('#name').value.trim();
+const date = document.querySelector('#date').value.trim();
+const description = document.querySelector('#description').value.trim();
+
+
+if (name && date && description) {
+  const response = await fetch(`/api/parties`, {
+    method: 'POST',
+    body: JSON.stringify({name, description, date}),
+    
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  if (response.ok) {
+    document.location.replace('dashboard');
+  } else {
+    alert('Failed to create project');
+  }
+}
+};
+
+const submitBtn = document.querySelector('#submit-party');
+submitBtn.addEventListener('click', newFormHandler);
