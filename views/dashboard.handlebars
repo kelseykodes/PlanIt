@@ -62,8 +62,8 @@
 
     <div class="row">
         
+         {{#each parties as |party| }}
         <div class="col s4 m4">
-            {{#each parties as |party| }}
             <div class="card">
                 <div class="card-image">
                     <img src="./image/newParty.jpeg">
@@ -84,8 +84,8 @@
                     {{!-- <a href="#">Delete</a> --}}
                 </div>
             </div>
-            {{/each}}
         </div>
+        {{/each}}
         <div class="col s4 m4">
             <div class="card-panel">
                 <span class="black-text">
