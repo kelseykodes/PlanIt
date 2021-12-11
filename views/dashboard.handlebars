@@ -1,26 +1,3 @@
-{{!-- Dashboard Nav Rendering --}}
-<nav class="nav-extended">
-    <div class="nav-wrapper">
-        <header class="brand-logo center"><img src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif'
-                width="50px" height="50px">Welcome to PlanIt </header>
-        <!-- for mobile use -->
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        {{!-- Home Button Works --}}
-        <ul class="left hide-on-med-and-down">
-            <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
-        </ul>
-        {{!-- Logout  will be rendered --}}
-        <ul class="right hide-on-med-and-down">
-            {{!-- IF THE USER IS LOGGED IN, LOGOUT BUTTON WILL APPEAR --}}
-            {{#if logged_in}}
-            <button id="logout" class=" waves-effect waves-light btn">Logout</button>
-            {{else}}
-            {{!-- IF THE USER IS LOGGED OUT THE LOGIN BUTTON WILL APPEAR --}}
-            <li class="right"><a class="waves-effect waves-light btn" href="/login">Login</a></li>
-            {{/if}}
-        </ul>
-    </div>
-</nav>
 <main>
     <p class="welcome">🎉 Welcome Back to your Parties! 🎉</p>
     <h4 class='center'>{{get_date}}</h4>
@@ -32,15 +9,6 @@
                     <img src="./image/Party 2.jpeg">
                     <span class="card-title">New Year's</span>
                 </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                        because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <!--If we click here it should take us to a page and or remove the it -->
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
-                </div>
             </div>
         </div>
         <div class="col s4 m4">
@@ -48,15 +16,6 @@
                 <div class="card-image">
                     <img src="./image/Party 3.jpg">
                     <span class="card-title">Summer Fun</span>
-                </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                        because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <!--If we click here it should take us to a page and or remove the it -->
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
                 </div>
             </div>
         </div>
@@ -66,15 +25,6 @@
                     <img src="./image/Party 4.jpg">
                     <span class="card-title">Movie Night</span>
                 </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                        because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <!--If we click here it should take us to a page and or remove the it -->
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
-                </div>
             </div>
         </div>
         <div class="col s4 m4">
@@ -83,40 +33,37 @@
                     <img src="./image/Party 5.jpeg">
                     <span class="card-title">Friendsgiving</span>
                 </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                        because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <!--If we click here it should take us to a page and or remove the it -->
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
-                </div>
             </div>
         </div>
     </div>
     {{!-- Added Parties --}}
 
     <div class="row">
-        {{#each parties as |party| }}
+        
         <div class="col s4 m4">
+            {{#each parties as |party| }}
             <div class="card">
                 <div class="card-image">
-                    <img src="./image/Party 2.jpeg">
+                    <img src="./image/Party 2.jpeg" width="auto" height="100px">
                     <span class="card-title">{{party.name}}</span>
                 </div>
                 <div class="card-content">
-                    {{!-- <p>{{partydate}}</p> --}}
-                    <p>{{party.description}}</p>
+                    <h5><i class="material-icons">date_range</i>  {{party.date}}</h5>
+                    <h5><i class="material-icons">people</i>  {{party.guests}} People</h5>
+                    <h6><i class="material-icons">drafts</i>  {{party.description}}</h6>
+                    <p><i class="material-icons">local_grocery_store</i>  Decorations: {{party.decorations}}</p>
+                    <p><i class="material-icons">library_music</i>  Music: {{party.music}}</p>
+                    <p><i class="material-icons">local_dining</i>  Food and Drinks: {{party.food_drinks}}</p>
+                    <p>Activities: {{party.activities}}</p>
                 </div>
                 <div class="card-action">
-                    <a href="/party-form"> <button id={{party.id}} class='editBtn'>Edit</button></a>
-                    <button id={{party.id}} class='deleteBtn'>Delete</button>
+                   {{!-- <a href="/party-form-edit/{{party.id}}"> <button id={{party.id}} class='editBtn'>Edit</button></a> --}}
+                    <button id={{party.id}} class='deleteBtn waves-effect waves-light btn'>Delete</button>
                     {{!-- <a href="#">Delete</a> --}}
                 </div>
             </div>
+            {{/each}}
         </div>
-        {{/each}}
         <div class="col s4 m4">
             <div class="card-panel">
                 <span class="black-text">

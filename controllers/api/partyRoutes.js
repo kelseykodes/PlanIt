@@ -8,7 +8,6 @@ router.post('/', withAuth, async (req, res) => {
         ...req.body,
         user_id: req.session.user_id,
       });
-  
       res.status(200).json(newParty);
     } catch (err) {
       res.status(400).json(err);
@@ -23,7 +22,6 @@ router.post('/', withAuth, async (req, res) => {
           user_id: req.session.user_id,
         },
       });
-  
       if (!partyData) {
         res.status(404).json({ message: 'No party found with this id!' });
         return;
@@ -35,21 +33,6 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
   
-//EDIT ROUTE
-router.put('/:id', withAuth, async (req, res) => {
-    try {
-      const editParty = await Party.findByPk({
-        ...req.body,
-        user_id: req.session.user_id,
-      });
-  
-      res.status(200).json(editParty);
-      res.render('/party-form')
-    } catch (err) {
-      res.status(400).json(err);
-    }
-});
-
 //Reference Button 
 router.get('/:id', withAuth, async (req, res) => {
   const partyId= req.params.id;
