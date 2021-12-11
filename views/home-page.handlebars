@@ -1,39 +1,5 @@
-<nav class="nav-extended">
-    <div class="nav-wrapper">
-        <header class="brand-logo center"><img src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif' width="50px"
-                height="50px">Welcome to PlanIt </header>
-        <!-- for mobile use -->
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            {{!-- IF THE USER IS LOGGED IN, LOGOUT BUTTON WILL APPEAR --}}
-            {{#if logged_in}}
-            <button id="dashboard" class="waves-effect waves-light btn">Dashboard</button>
-            <button id="logout" class="waves-effect waves-light btn">Logout</button>
-            {{else}}
-            {{!-- IF THE USER IS LOGGED OUT THE LOGIN BUTTON WILL APPEAR --}}
-            <li><a class="waves-effect waves-light btn" href="/login">Login</a></li>
-            {{/if}}
-        </ul>
-    </div>
-    <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#">Themes</a></li>
-            <li class="tab"><a href="#">Activities</a></li>
-            <li class="tab"><a href="#">Food/Drinks</a></li>
-            <li class="tab"><a href="#">Music</a></li>
-            <li class="tab"><a href="#">Decoration</a></li>
-        </ul>
-    </div>
-</nav>
-<ul class="sidenav" id="mobile-demo">
-    {{!-- LINK WILL TAKE USER TO HOME-PAGE --}}
-    <li><a href="/">Home</a></li>
-    {{!-- LINK WILL TAKE USER TO LOGIN/SIGNUP PAGE --}}
-    <li><a href="/login">Login</a></li>
-    <li><a href="#">Contact</a></li>
-</ul>
 <h2 class='center'>Create the Party Of Your Dreams</h2>
-<h5 class='center'>We are here to help you create your own party with all the materials you may need!</h5>
+<p class='center'>We are here to help you create your own party with all the materials you may need!</p>
 <div class='home-page'>
-    <img src='https://media.giphy.com/media/l4FGKa1f18gAcWGEU/giphy.gif' width='100%' height='100%'>
+    <img src='https://media.giphy.com/media/l4FGKa1f18gAcWGEU/giphy.gif' width='100%' height='100%' >   
 </div>
