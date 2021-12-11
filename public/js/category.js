@@ -4,6 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
   M.Collapsible.init(elems, {accordion: false});
 });
 
+//DELETE BUTTON
+const deleteButton = document.getElementsByClassName("deleteBtn");
+
+function deleteParty(e){
+  e.preventDefault();
+  console.log(e.target.id);
+  fetch(`/api/parties/${e.target.id}`, {
+    method: 'DELETE'
+  })
+}
+for (i = 0; i<deleteButton.length; i++){
+  deleteButton[i].addEventListener('click', deleteParty)
+}
+
 
 // Decoration: 
 // control decoration-add-all button
