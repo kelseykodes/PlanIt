@@ -23,13 +23,13 @@ router.post('/', withAuth, async (req, res) => {
           user_id: req.session.user_id,
         },
       });
-  
+      window.location.reload();
       if (!partyData) {
         res.status(404).json({ message: 'No party found with this id!' });
         return;
-      }
-  
+      } 
       res.status(200).json(partyData);
+      
     } catch (err) {
       res.status(500).json(err);
     }
