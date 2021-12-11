@@ -50,6 +50,7 @@ router.put('/:id', withAuth, async (req, res) => {
     }
 });
 
+//Reference Button 
 router.get('/:id', withAuth, async (req, res) => {
   const partyId= req.params.id;
   const result =  await Party.findOne({
@@ -62,7 +63,5 @@ router.get('/:id', withAuth, async (req, res) => {
   res.render('party-form', parties);
 
 });
-
-  
 module.exports = router;
   

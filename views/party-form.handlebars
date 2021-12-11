@@ -1,9 +1,9 @@
 <main>
+  {{!--Refreash Button --}}
+  {{#each parties }}
+  <h1>{{ parties.id }}</h1>
+  {{/each}}
   <div class="container1">
-
-    {{#each parties }}
-    <h1>{{ parties.id }}</h1>
-    {{/each}}
     <div class="row ">
       <form class="col s12">
         <div class="row">
@@ -65,7 +65,7 @@
                                 <!-- name of the category -->
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
-                                    class="material-icons">cake</i>Decorations</div>
+                                    class="material-icons">local_grocery_store</i>Decorations</div>
                                 <div class="collapsible-body">
                                   <form action="#" style='text-align: left;'>
                                     <p>
@@ -74,6 +74,38 @@
                                         <input type="checkbox" class="checkbox-decoration" value='Party Invitations' />
                                         <span style=' font-size: large;'>Party Invitations</span>
                                         <p>$10.99</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-decoration" value='Tablecloths' />
+                                        <span style=' font-size: large;'>Tablecloths</span>
+                                        <p>$8.99</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-decoration" value='Streamers' />
+                                        <span style=' font-size: large;'>Streamers</span>
+                                        <p>$5.99</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-decoration" value='Balloons' />
+                                        <span style=' font-size: large;'>Balloons</span>
+                                        <p>$11.99</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-decoration" value='Centerpieces' />
+                                        <span style=' font-size: large;'>Centerpieces</span>
+                                        <p>$14.99</p>
                                       </label>
                                     </p>
                                   </form>
@@ -252,8 +284,8 @@
                               <li class='active'>
                                 <!-- name of the category -->
                                 <div class="collapsible-header teal lighten-2"
-                                  style='color: aliceblue; font-size: larger;'><i class="material-icons">cake</i>Food
-                                </div>
+                                  style='color: aliceblue; font-size: larger;'><i
+                                    class="material-icons">local_dining</i>Food</div>
                                 <div class="collapsible-body">
                                   <form action="#" style='text-align: left;'>
                                     <p>
@@ -265,13 +297,59 @@
                                         <p>No Nuts</p>
                                       </label>
                                     </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-fd" value='Meatballs' />
+                                        <span style=' font-size: large;'>Meatballs</span>
+                                        <p>Quick and easy for any party</p>
+                                        <p>No Nuts</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-fd" value='Birthday Cake' />
+                                        <span style=' font-size: large;'>Birthday Cake</span>
+                                        <p>The perfect cake to blow the candles out on!</p>
+                                        <p>No Nuts</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-fd" value='Oreo truffles' />
+                                        <span style=' font-size: large;'>Oreo truffles</span>
+                                        <p>Sweet tooth snacks for everyone to enjoy!</p>
+                                        <p>No Nuts</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-fd" value='Pigs in a blanket' />
+                                        <span style=' font-size: large;'>Pigs in a blanket</span>
+                                        <p>Cozy sausage wrapped in a blanket of crescent rolls</p>
+                                        <p>No Nuts</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <!-- change the value to the name of each item & don't remove <span> tag -->
+                                        <input type="checkbox" class="checkbox-fd" value='Peanut Caramel Slice' />
+                                        <span style=' font-size: large;'>Peanut Caramel Slice</span>
+                                        <p>Base 125 g butter softened 2 Tbsp golden syrup 90g butter, 150g toasted
+                                          peanuts</p>
+                                        <p>Has Nuts</p>
+                                      </label>
+                                    </p>
                                   </form>
                                 </div>
                               </li>
                               <li class='active'>
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
-                                    class="material-icons">ac_unit</i>Drinks</div>
+                                    class="material-icons">local_bar</i>Drinks</div>
                                 <div class="collapsible-body">
                                   <form action="#" style='text-align: left;'>
                                     <p>
@@ -288,6 +366,40 @@
                                         <input type="checkbox" class="checkbox-fd" value='Hot Chocolate' />
                                         <span style='font-size: large;'>Hot Chocolate</span>
                                         <p>1 Swiss Miss hot chocolate packet, milk or water</p>
+                                        <p>Non-alcohol</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input type="checkbox" class="checkbox-fd" value='Eggnog' />
+                                        <span style='font-size: large;'>Eggnog</span>
+                                        <p>Non-alcohol</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input type="checkbox" class="checkbox-fd" value='Boozy Grinch Punch' />
+                                        <span style='font-size: large;'>Boozy Grinch Punch</span>
+                                        <p>Has alcohol</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input type="checkbox" class="checkbox-fd" value='Perfect Mudslide' />
+                                        <span style='font-size: large;'>Perfect Mudslide</span>
+                                        <p>Chocolate syrup,4 oz. vodka, 2 oz. Kahlua, Baileys, heavy cream, Chocolate
+                                          shavings</p>
+                                        <p>Has alcohol</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input type="checkbox" class="checkbox-fd"
+                                          value='Apple Ginger Sour Mocktail with Rosemary' />
+                                        <span style='font-size: large;'>Apple Ginger Sour Mocktail with Rosemary</span>
+                                        <p>1/2 tablespoon cranberry juice concentrate ,lemon juice, 1/2 ounce whiskey
+                                          sour mixer, 1-ounce maple whiskey sour mixer, 3 1/2 ounces apple ginger juice,
+                                          garnish with a sprig of fresh rosemary, ice</p>
                                         <p>Non-alcohol</p>
                                       </label>
                                     </p>
@@ -352,17 +464,32 @@
                               <li class='active'>
                                 <!-- name of the category -->
                                 <div class="collapsible-header teal lighten-2"
-                                  style='color: aliceblue; font-size: larger;'><i class="material-icons">cake</i>Game
-                                </div>
+                                  style='color: aliceblue; font-size: larger;'><i
+                                    class="material-icons">videogame_asset</i>Game</div>
                                 <div class="collapsible-body">
                                   <form action="#" style='text-align: left;'>
                                     <p>
                                       <label>
-                                        <!-- change the value to the name of each item & don't remove <span> tag -->
                                         <input type="checkbox" class="checkbox-activity" value='Uno' />
                                         <span style=' font-size: large;'>Uno</span>
                                         <p>A card game for 2-10 people</p>
                                         <p>150 mins</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input type="checkbox" class="checkbox-activity" value='Monopoly' />
+                                        <span style=' font-size: large;'>Monopoly</span>
+                                        <p>A board game for 2-8 people</p>
+                                        <p>180 mins</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input type="checkbox" class="checkbox-activity" value='Super Smash Bros' />
+                                        <span style=' font-size: large;'>Super Smash Bros</span>
+                                        <p>A video game for 2-4 people</p>
+                                        <p>20 mins</p>
                                       </label>
                                     </p>
                                   </form>
@@ -370,8 +497,8 @@
                               </li>
                               <li class='active'>
                                 <div class="collapsible-header teal lighten-2"
-                                  style='color: aliceblue; font-size: larger;'><i
-                                    class="material-icons">ac_unit</i>Movies</div>
+                                  style='color: aliceblue; font-size: larger;'><i class="material-icons">tv</i>Movies
+                                </div>
                                 <div class="collapsible-body">
                                   <form action="#" style='text-align: left;'>
                                     <p>
@@ -390,13 +517,21 @@
                                         <p>115 mins</p>
                                       </label>
                                     </p>
+                                    <p>
+                                      <label>
+                                        <input type="checkbox" class="checkbox-activity" value='Up' />
+                                        <span style='font-size: large;'>Up</span>
+                                        <p>A family movie</p>
+                                        <p>96 mins</p>
+                                      </label>
+                                    </p>
                                   </form>
                                 </div>
                               </li>
                               <li class='active'>
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
-                                    class="material-icons">whatshot</i>Others</div>
+                                    class="material-icons">video_library</i>Others</div>
                                 <div class="collapsible-body">
                                   <form action="#" style='text-align: left;'>
                                     <p>
@@ -413,6 +548,14 @@
                                         <span style='font-size: large;'>Wine Tasting</span>
                                         <p>Adults Only</p>
                                         <p>120 mins</p>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input type="checkbox" class="checkbox-activity" value='Dancing' />
+                                        <span style='font-size: large;'>Dancing</span>
+                                        <p>For the whole family. Pick your music and start!</p>
+                                        <p>60 mins</p>
                                       </label>
                                     </p>
                                   </form>

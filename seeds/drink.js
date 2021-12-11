@@ -29,7 +29,7 @@ const drinksData = [
       drink_name: "Perfect Mudslide",
       description: "perfect mudslide",
       ingredients: `Chocolate syrup, for glass, 4 oz. vodka, 2 oz. Kahlua, 2 oz. Baileys, 4 c. heavy cream, Ice, Chocolate shavings, for garnish`,
-      hasAlcohol: false
+      hasAlcohol: true
     },
     {
       drink_name: "Apple Ginger Sour Mocktail with Rosemary",
