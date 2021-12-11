@@ -1,88 +1,59 @@
 <!DOCTYPE html>
-<html>
+  <html>
+    <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        {{!-- FIXED PATH TO LINK CSS COORECTLY, ../../ --}}
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
 
-<head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  {{!-- FIXED PATH TO LINK CSS COORECTLY, ../../ --}}
-  <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+    <body>
+        <ul class="sidenav" id="mobile-demo">
+            {{!-- LINK WILL TAKE USER TO HOME-PAGE --}}
+            <li><a href="/">Home</a></li>
+            {{!-- LINK WILL TAKE USER TO LOGIN/SIGNUP PAGE --}}
+            <li><a href="/login">Login</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <main>
+            <!-- main page Handlebars-->
+          <div class='change'>
+            {{{body}}}
+          </div> 
+        </main>
+               
+          <footer class="page-footer #aed581 light-green lighten-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Planit</h5>
+                    <p class="grey-text text-lighten-4">Your number one party planning app!</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
 
-<body>
-  <nav class="nav-extended #aed581 light-green lighten-2">
-    <div class="navbar-wrapper">
-      <ul id=title>
-        <a href="#" data-target="mobile-demo" class="brand-logo center"><img
-            src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif' width="50px" height="50px">Welcome to
-          Planit</a>
-      </ul>
-      <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
-        {{!-- IF THE USER IS LOGGED IN, LOGOUT BUTTON WILL APPEAR --}}
-        {{#if logged_in}}
-        <button id="logout" class="waves-effect waves-light btn">Logout</button>
-        <button id="dashboard" class="waves-effect waves-light btn">Dashboard</button>
-        {{else}}
-        {{!-- IF THE USER IS LOGGED OUT THE LOGIN BUTTON WILL APPEAR --}}
-        <li><a class="waves-effect waves-light btn" href="/login">Login</a></li>
-        {{/if}}
-        {{!-- <li><a class="waves-effect #00bfa5 teal accent-4 btn" href="#">Login</a></li> --}}
-      </ul>
-    </div>
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#">Themes</a></li>
-        <li class="tab"><a href="#">Activities</a></li>
-        <li class="tab"><a href="#">Food/Drinks</a></li>
-        <li class="tab"><a href="#">Music</a></li>
-        <li class="tab"><a href="#">Decoration</a></li>
-      </ul>
-    </div>
-  </nav>
-  <ul class="sidenav" id="mobile-demo">
-    {{!-- LINK WILL TAKE USER TO HOME-PAGE --}}
-    <li><a href="/">Home</a></li>
-    {{!-- LINK WILL TAKE USER TO LOGIN/SIGNUP PAGE --}}
-    <li><a href="/login">Login</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  <main>
-    <!-- main page Handlebars-->
-    <div class='change'>
-      {{{body}}}
-    </div>
-  </main>
-
-  <!--JavaScript at end of body for optimized loading-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- IF USER IS LOGGED IN, WILL RENDER LOGOUT SCRIPT -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{else}}
-  {{!-- IF USER IS NOT LOGGED IN, WILL RENDER LOGIN SCRIPT --}}
-  <script src="js/login.js"></script>
-  {{/if}}
-  {{{_sections.script}}}
-  <script></script>
-
-  {{!-- Main Footer Keep on all pages --}}
-<footer class="page-footer #aed581 light-green lighten-2">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Planit</h5>
-        <p class="grey-text text-lighten-4">You're number one party planning app!</p>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-      © 2021 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="js/category.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- IF USER IS LOGGED IN, WILL RENDER LOGOUT SCRIPT -->
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{else}}
+      {{!-- IF USER IS NOT LOGGED IN, WILL RENDER LOGIN SCRIPT --}}
+       <script src="js/login.js"></script>
+       {{/if}}
+       {{{_sections.script}}}
+    </body>
+  </html>
+        

@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Music extends Model {}
+class Party extends Model {}
 
-Music.init(
+Party.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,22 +15,29 @@ Music.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    singer: {
+    description: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    theme: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
+    partydate: {
+      type: DataTypes.STRING, 
+      allowNull: true,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
+      
   },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'music',
+    modelName: 'party',
   }
 );
 
-module.exports = Music;
+module.exports = Party;
