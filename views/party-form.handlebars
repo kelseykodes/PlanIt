@@ -1,3 +1,22 @@
+{{!-- Party Form Completed --}}
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+        <header class="brand-logo center"><img src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif'
+                width="50px" height="50px">Welcome to PlanIt </header>
+        <!-- for mobile use -->
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        {{!-- Home Button Works --}}
+        <ul class="left hide-on-med-and-down">
+            <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
+        </ul>
+        {{!-- Logout  will be rendered --}}
+        <ul class="right hide-on-med-and-down">
+            {{!-- IF THE USER IS LOGGED IN, LOGOUT BUTTON WILL APPEAR --}}
+            {{!-- This would take you to Dashboard --}}
+            <li class="right"><a class="waves-effect waves-light btn" href="/login">Dashboard</a></li>
+        </ul>
+    </div>
+</nav>   
 <main>
   {{!--Refreash Button --}}
   {{#each parties }}
@@ -39,14 +58,14 @@
                 <!-- the Decoration list added here -->
                 <ul id="current-decoration-list" style='color: aliceblue; font-size: larger;'></ul>
               </div>
-              <div class="card-action">
+              <div class="card-action" id="edges">
                 <a href="#">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal"
                     data-target="#decorationExampleModal">
                     Add Decoration
                   </button>
-                  <button class="waves-effect waves-light btn" id="saveBtnNo1">Save</button>
+                  {{!-- <button class="waves-effect waves-light btn" id="saveBtnNo1">Save</button> --}}
                   <!-- Modal -->
                   <div class="modal fade" id="decorationExampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="decorationExampleModalLabel" aria-hidden="true">
@@ -142,13 +161,13 @@
                 <!-- origin save button, can be: <button class="waves-effect waves-light btn" id="saveBtn">Save</button>      -->
               </div>
 
-              <div class="card-action">
+              <div class="card-action" id="edges">
                 <a href="#">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#musicExampleModal">
                     Add Music
                   </button>
-                  <button class="waves-effect waves-light btn" id="saveBtnNo2">Save</button>
+                  {{!-- <button class="waves-effect waves-light btn" id="saveBtnNo2">Save</button> --}}
                   <!-- Modal -->
                   <div class="modal fade" id="musicExampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="musicExampleModalLabel" aria-hidden="true">
@@ -257,14 +276,14 @@
                 </ul>
               </div>
 
-              <div class="card-action">
+              <div class="card-action" id="edges">
                 <a href="#">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal"
                     data-target="#foodAndDrinksExampleModal">
                     Add Food & Drinks
                   </button>
-                  <button class="waves-effect waves-light btn" id="saveBtnNo3">Save</button>
+                  {{!-- <button class="waves-effect waves-light btn" id="saveBtnNo3">Save</button> --}}
                   <!-- Modal -->
                   <div class="modal fade" id="foodAndDrinksExampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="foodAndDrinksExampleModalLabel" aria-hidden="true">
@@ -437,14 +456,14 @@
                 </ul>
               </div>
 
-              <div class="card-action">
+              <div class="card-action" id="edges">
                 <a href="#">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal"
                     data-target="#activitiesExampleModal">
                     Add Activities
                   </button>
-                  <button class="waves-effect waves-light btn" id="saveBtnNo4">Save</button>
+                  {{!-- <button class="waves-effect waves-light btn" id="saveBtnNo4">Save</button> --}}
                   <!-- Modal -->
                   <div class="modal fade" id="activitiesExampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="activitiesExampleModalLabel" aria-hidden="true">
@@ -591,3 +610,4 @@
     </div>
   </div>
 </main>
+
