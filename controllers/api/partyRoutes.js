@@ -25,7 +25,7 @@ router.post('/', withAuth, async (req, res) => {
       });
   
       if (!partyData) {
-        res.status(404).json({ message: 'No project found with this id!' });
+        res.status(404).json({ message: 'No party found with this id!' });
         return;
       }
   
