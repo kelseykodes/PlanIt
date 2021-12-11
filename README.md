@@ -8,7 +8,9 @@ This assignment is set to display an updated weather forecast of any city chosen
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)
+- [User Story](#user-story)
+- [Credits](#credits)
+- [Collaborators](#collaborators)
 - [Credits](#credits)
 - [License](#license)
 
@@ -20,22 +22,24 @@ This assignment is set to display an updated weather forecast of any city chosen
 - npm run seed
 - npm start
 
-## Usage
+## User-Story
+AS A party host, I want an event planner accountability application 
+SO THAT I can organize my gatherings with helpful suggestions to guide me in thoroughly planning a successful, entertaining celebration.
 
-Event planning
 
 ## Credits
 - Confetti code from https://www.youtube.com/watch?v=quSR_ZrVz6Y&t=44s
 - https://github.com/CoderZ90/confetti/blob/main/confetti.js (Confetti Code)
 
-Collaborators: 
+## Collaborators
 
 - Reagin Turner: https://github.com/Reagintaylor
 - Jing Li: https://github.com/lijing-code
 - Eldana Desalgne: https://github.com/ed2022
 
 ## Website Preview 
-Webpage Preview Screen
+- Heroku Deployment: https://evening-earth-70019.herokuapp.com/
+- Webpage Preview Screen
 
 <img src='./public/image/website.jpg'>
 
