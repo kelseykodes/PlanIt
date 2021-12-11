@@ -4,6 +4,36 @@ document.addEventListener('DOMContentLoaded', function() {
   M.Collapsible.init(elems, {accordion: false});
 });
 
+//DELETE BUTTON
+const deleteButton = document.getElementsByClassName("deleteBtn");
+
+
+function deleteParty(e){
+  e.preventDefault();
+  console.log(e.target.id);
+  fetch(`/api/parties/${e.target.id}`, {
+    method: 'DELETE'
+  })
+}
+for (i = 0; i<deleteButton.length; i++){
+  deleteButton[i].addEventListener('click', deleteParty)
+}
+ 
+
+// //EDIT BUTTON
+// const editButton = document.getElementsByClassName("editBtn");
+
+// function editParty(e){
+//   e.preventDefault();
+//   console.log(e.target.id);
+//   fetch(`/api/parties/${e.target.id}`, {
+//     method: 'PUT'
+//   })
+// }
+// for (i = 0; i<deleteButton.length; i++){
+//   deleteButton[i].addEventListener('click', editParty)
+// }
+
 
 // Decoration: 
 // control decoration-add-all button
