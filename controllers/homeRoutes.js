@@ -60,6 +60,8 @@ router.get('/dashboard', withAuth, async (req, res) => {
 });
 
 
+
+
 router.get('/party-form', async (req, res) => {
   try {
     // Pass serialized data and session flag into template

@@ -1,117 +1,122 @@
-    <main>
-        <p class="welcome">🎉 Welcome Back to your Parties! 🎉</p>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card">
-                    {{#if parties.length}}
-                    {{#each parties as |party| }}
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./image/Party 2.jpeg">
-                            <span class="card-title">{{party.name}}</span>
-                        </div>
-                        <div class="card-content">
-                            {{!-- <p>{{partydate}}</p> --}}
-                            <p>{{party.description}}</p>
-                        </div>
-                        <div class="card-action">
-                            <button id={{party.id}} class='editBtn'>Edit</button>
-                            <button id={{party.id}} class='deleteBtn'>Delete</button>
-                            {{!-- <a href="#">Delete</a> --}}
-                        </div>
-                        
-                    </div>
-                    {{/each}}
-                {{/if}}
+<main>
+    <p class="welcome">🎉 Welcome Back to your Parties! 🎉</p>
+    {{!-- Dummy Parties --}}
+    <div class="row">
+        <div class="col s4 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./image/Party 2.jpeg">
+                    <span class="card-title">New Year's</span>
                 </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Party 2.jpeg">
-                        <span class="card-title">New Year's</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                            because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <!--If we click here it should take us to a page and or remove the it -->
-                        <a href="#">Edit</a>
-                        <a href="#">Delete</a>
-                    </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                        because I require little markup to use effectively.</p>
                 </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Party 3.jpg">
-                        <span class="card-title">Summer Fun</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                            because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <!--If we click here it should take us to a page and or remove the it -->
-                        <a href="#">Edit</a>
-                        <a href="#">Delete</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Party 4.jpg">
-                        <span class="card-title">Movie Night</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                            because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <!--If we click here it should take us to a page and or remove the it -->
-                        <a href="#">Edit</a>
-                        <a href="#">Delete</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Party 5.jpeg">
-                        <span class="card-title">Friendsgiving</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                            because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <!--If we click here it should take us to a page and or remove the it -->
-                        <a href="#">Edit</a>
-                        <a href="#">Delete</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card-panel">
-                    <span class="black-text"><h5>add another event</h1></span>
-                    <a class=" right btn-floating btn-large waves-effect waves-light red" href="/party-form"><i class="material-icons">add</i></a>
+                <div class="card-action">
+                    <!--If we click here it should take us to a page and or remove the it -->
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
                 </div>
             </div>
         </div>
-        <script src="js/confetti.js"></script>
-        <script> 
+        <div class="col s4 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./image/Party 3.jpg">
+                    <span class="card-title">Summer Fun</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                        because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <!--If we click here it should take us to a page and or remove the it -->
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s4 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./image/Party 4.jpg">
+                    <span class="card-title">Movie Night</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                        because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <!--If we click here it should take us to a page and or remove the it -->
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s4 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./image/Party 5.jpeg">
+                    <span class="card-title">Friendsgiving</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                        because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <!--If we click here it should take us to a page and or remove the it -->
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- Added Parties --}}
+
+    <div class="row">
+        <div class="col s4 m4">
+            {{#each parties as |party| }}
+            <div class="card">
+                <div class="card-image">
+                    <img src="./image/Party 2.jpeg">
+                    <span class="card-title">{{party.name}}</span>
+                </div>
+                <div class="card-content">
+                    {{!-- <p>{{partydate}}</p> --}}
+                    <p>{{party.description}}</p>
+                </div>
+                <div class="card-action">
+                   <a href="/party-form"> <button id={{party.id}} class='editBtn'>Edit</button></a>
+                    <button id={{party.id}} class='deleteBtn'>Delete</button>
+                    {{!-- <a href="#">Delete</a> --}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="col s4 m4">
+            <div class="card-panel">
+                <span class="black-text">
+                    <h5>add another event</h1>
+                </span>
+                <a class=" right btn-floating btn-large waves-effect waves-light red" href="/party-form"><i
+                        class="material-icons">add</i></a>
+            </div>
+        </div>
+    </div>
+    <script src="js/confetti.js"></script>
+    <script>
         const start = () => {
-          setTimeout(function(){
-            confetti.start();
-          }, 1000)}
+            setTimeout(function () {
+                confetti.start();
+            }, 1000)
+        }
 
         const stop = () => {
-          setTimeout(function(){
-            confetti.stop();
-          },4000)}
-          start();
-          stop();
-        </script>
-    </main>
+            setTimeout(function () {
+                confetti.stop();
+            }, 4000)
+        }
+        start();
+        stop();
+    </script>
+</main>
