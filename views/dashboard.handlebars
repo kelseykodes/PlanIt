@@ -1,6 +1,6 @@
 <main>
-    <p class="welcome">🎉 Welcome Back to your Parties! 🎉</p>
-    <h4 class='center'>{{get_date}}</h4>
+    <h4 class="welcome">🎉 Welcome Back to your Parties! 🎉</h4>
+    <h5 class="center">{{get_date}}</h5>
     {{!-- Dummy Parties --}}
     <div class="row">
         <div class="col s4 m4">
@@ -44,8 +44,8 @@
             {{#each parties as |party| }}
             <div class="card">
                 <div class="card-image">
-                    <img src="./image/Party 2.jpeg" width="auto" height="100px">
-                    <span class="card-title">{{party.name}}</span>
+                    <img src="./image/newParty.jpeg">
+   <span class="card-title">{{party.name}}</span>
                 </div>
                 <div class="card-content">
                     <h5><i class="material-icons">date_range</i>  {{party.date}}</h5>
