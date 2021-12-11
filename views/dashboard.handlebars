@@ -15,6 +15,7 @@
                             <p>{{party.description}}</p>
                         </div>
                         <div class="card-action">
+                            <button id={{party.id}} class='editBtn'>Edit</button>
                             <button id={{party.id}} class='deleteBtn'>Delete</button>
                             {{!-- <a href="#">Delete</a> --}}
                         </div>
@@ -112,6 +113,5 @@
           },4000)}
           start();
           stop();
-          console.log(working)
         </script>
     </main>
