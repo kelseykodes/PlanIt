@@ -1,3 +1,22 @@
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+        <header class="brand-logo center"><img src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif' width="50px"
+                height="50px">Welcome to PlanIt </header>
+        <!-- for mobile use -->
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="hide-on-med-and-down">
+            <li class="left"><a class="waves-effect waves-light btn" href="/">Home</a></li>
+            {{!-- IF THE USER IS LOGGED IN, LOGOUT BUTTON WILL APPEAR --}}
+            {{#if logged_in}}
+            <button id="logout" class=" right waves-effect waves-light btn">Logout</button>
+            <button id="dashboard" class="right waves-effect waves-light btn">Dashboard</button>
+            {{else}}
+            {{!-- IF THE USER IS LOGGED OUT THE LOGIN BUTTON WILL APPEAR --}}
+            <li class="right"><a class="waves-effect waves-light btn" href="/login">Login</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>
 <main>
     <p class="welcome">🎉 Welcome Back to your Parties! 🎉</p>
     {{!-- Dummy Parties --}}
