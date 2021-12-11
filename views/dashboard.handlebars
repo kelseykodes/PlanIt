@@ -1,15 +1,19 @@
+{{!-- Dashboard Nav Rendering --}}
 <nav class="nav-extended">
     <div class="nav-wrapper">
-        <header class="brand-logo center"><img src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif' width="50px"
-                height="50px">Welcome to PlanIt </header>
+        <header class="brand-logo center"><img src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif'
+                width="50px" height="50px">Welcome to PlanIt </header>
         <!-- for mobile use -->
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="hide-on-med-and-down">
-            <li class="left"><a class="waves-effect waves-light btn" href="/">Home</a></li>
+        {{!-- Home Button Works --}}
+        <ul class="left hide-on-med-and-down">
+            <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
+        </ul>
+        {{!-- Logout  will be rendered --}}
+        <ul class="right hide-on-med-and-down">
             {{!-- IF THE USER IS LOGGED IN, LOGOUT BUTTON WILL APPEAR --}}
             {{#if logged_in}}
-            <button id="logout" class=" right waves-effect waves-light btn">Logout</button>
-            <button id="dashboard" class="right waves-effect waves-light btn">Dashboard</button>
+            <button id="logout" class=" waves-effect waves-light btn">Logout</button>
             {{else}}
             {{!-- IF THE USER IS LOGGED OUT THE LOGIN BUTTON WILL APPEAR --}}
             <li class="right"><a class="waves-effect waves-light btn" href="/login">Login</a></li>
@@ -93,8 +97,8 @@
     {{!-- Added Parties --}}
 
     <div class="row">
+        {{#each parties as |party| }}
         <div class="col s4 m4">
-            {{#each parties as |party| }}
             <div class="card">
                 <div class="card-image">
                     <img src="./image/Party 2.jpeg">
@@ -105,13 +109,13 @@
                     <p>{{party.description}}</p>
                 </div>
                 <div class="card-action">
-                   <a href="/party-form"> <button id={{party.id}} class='editBtn'>Edit</button></a>
+                    <a href="/party-form"> <button id={{party.id}} class='editBtn'>Edit</button></a>
                     <button id={{party.id}} class='deleteBtn'>Delete</button>
                     {{!-- <a href="#">Delete</a> --}}
                 </div>
             </div>
-            {{/each}}
         </div>
+        {{/each}}
         <div class="col s4 m4">
             <div class="card-panel">
                 <span class="black-text">

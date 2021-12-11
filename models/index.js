@@ -10,6 +10,4 @@ Party.belongsTo(User, {
     foreignKey: 'user_id',
 })
 
-module.exports = {User, Party};
-
-
+module.exports = { User, Party };

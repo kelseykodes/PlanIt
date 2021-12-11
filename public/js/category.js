@@ -14,6 +14,7 @@ function deleteParty(e){
   fetch(`/api/parties/${e.target.id}`, {
     method: 'DELETE'
   })
+  window.location.reload();
 }
 for (i = 0; i<deleteButton.length; i++){
   deleteButton[i].addEventListener('click', deleteParty)
