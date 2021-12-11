@@ -36,19 +36,33 @@ router.post('/', withAuth, async (req, res) => {
 });
   
 //EDIT ROUTE
-// router.put('/:id', withAuth, async (req, res) => {
-//     try {
-//       const editParty = await Party.findByPk({
-//         ...req.body,
-//         user_id: req.session.user_id,
-//       });
+router.put('/:id', withAuth, async (req, res) => {
+    try {
+      const editParty = await Party.findByPk({
+        ...req.body,
+        user_id: req.session.user_id,
+      });
   
-//       res.status(200).json(editParty);
-//       res.render('/party-form')
-//     } catch (err) {
-//       res.status(400).json(err);
-//     }
-//   });
+      res.status(200).json(editParty);
+      res.render('/party-form')
+    } catch (err) {
+      res.status(400).json(err);
+    }
+});
+
+router.get('/:id', withAuth, async (req, res) => {
+  const partyId= req.params.id;
+  const result =  await Party.findOne({
+    where: {
+      id: partyId,
+    },
+  });
+  console.log(result)
+  const parties = result.map((party)=> party.get({plain: true}));
+  res.render('party-form', parties);
+
+});
+
   
-// module.exports = router;
+module.exports = router;
   

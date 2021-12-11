@@ -21,18 +21,18 @@ for (i = 0; i<deleteButton.length; i++){
  
 
 // //EDIT BUTTON
-// const editButton = document.getElementsByClassName("editBtn");
+const editButton = document.getElementsByClassName("editBtn");
 
-// function editParty(e){
-//   e.preventDefault();
-//   console.log(e.target.id);
-//   fetch(`/api/parties/${e.target.id}`, {
-//     method: 'PUT'
-//   })
-// }
-// for (i = 0; i<deleteButton.length; i++){
-//   deleteButton[i].addEventListener('click', editParty)
-// }
+function editParty(e){
+  e.preventDefault();
+  console.log(e.target.id);
+  fetch(`/api/parties/${e.target.id}`, {
+    method: 'PUT'
+  })
+}
+for (i = 0; i<deleteButton.length; i++){
+  deleteButton[i].addEventListener('click', editParty)
+}
 
 
 // Decoration: 
