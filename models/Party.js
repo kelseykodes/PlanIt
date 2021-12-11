@@ -19,10 +19,30 @@ Party.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // partydate: {
-    //   type: DataTypes.STRING, 
-    //   allowNull: true,
-    // },
+    date: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    guests: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    decorations: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    music: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    food_drinks: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    activities: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -33,7 +53,9 @@ Party.init(
       
   },
   {
+    
     sequelize,
+    timestamps:false,
     freezeTableName: true,
     underscored: true,
     modelName: 'party',

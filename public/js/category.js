@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //DELETE BUTTON
 const deleteButton = document.getElementsByClassName("deleteBtn");
 
-
 function deleteParty(e){
   e.preventDefault();
   console.log(e.target.id);
@@ -21,28 +20,13 @@ for (i = 0; i<deleteButton.length; i++){
 }
  
 
-// //EDIT BUTTON
-const editButton = document.getElementsByClassName("editBtn");
-
-function editParty(e){
-  e.preventDefault();
-  console.log(e.target.id);
-  fetch(`/api/parties/${e.target.id}`, {
-    method: 'PUT'
-  })
-}
-for (i = 0; i<deleteButton.length; i++){
-  deleteButton[i].addEventListener('click', editParty)
-}
-
-
 // Decoration: 
 // control decoration-add-all button
 const checksOfDecoration = document.getElementsByClassName('checkbox-decoration');
 const currentDecorationList = document.getElementById("current-decoration-list");
 const addAllDecoration = document.getElementById("addDecorationBtn")
 let decorationAnswer = [];
-
+// let decorationSelection = [];
 function getDecorationValue(e){
 e.preventDefault();
 currentDecorationList.innerHTML = " ";
@@ -56,8 +40,7 @@ for(j=0;j<decorationAnswer.length; j++){
   li.innerHTML = decorationAnswer[j];
   currentDecorationList.appendChild(li);
 }  
-console.log(decorationAnswer);
-storeTheSelection = decorationAnswer;
+// decorationSelection = decorationAnswer;
 decorationAnswer = [];
 }  
 
@@ -83,6 +66,7 @@ clearAll.addEventListener('click', clearDecorationValue);
 
 const saveBtnNo1 = document.getElementById("saveBtnNo1");
 let finalDecorationAnswer = [];
+let decorationSelection = [];
 
 const generateDecorationAnswer = (e) =>{
 e.preventDefault();
@@ -92,8 +76,6 @@ for (i=0; i<currentDecorationList.childElementCount; i++){
 }
 console.log(finalDecorationAnswer);
 return finalDecorationAnswer;
-// back to the front page
-// window location changed
 }
 
 saveBtnNo1.addEventListener('click', generateDecorationAnswer);
@@ -120,7 +102,7 @@ for(j=0;j<musicAnswer.length; j++){
   currentMusicList.appendChild(li);
 }  
 console.log(musicAnswer);
-storeTheSelection = musicAnswer;
+// storeTheSelection = musicAnswer;
 musicAnswer = [];
 }  
 
@@ -180,7 +162,7 @@ for(j=0;j<fdAnswer.length; j++){
   currentFdList.appendChild(li);
 }  
 console.log(fdAnswer);
-storeTheSelection = fdAnswer;
+// storeTheSelection = fdAnswer;
 fdAnswer = [];
 }  
 
@@ -239,7 +221,7 @@ for(j=0;j<activityAnswer.length; j++){
   currentActivityList.appendChild(li);
 }  
 console.log(activityAnswer);
-storeTheSelection = activityAnswer;
+// storeTheSelection = activityAnswer;
 activityAnswer = [];
 }  
 
@@ -282,13 +264,18 @@ saveBtnNo4.addEventListener('click', generateActivityAnswer);
 const submitFormHandler = async (event) => {
   event.preventDefault();
   const name = document.querySelector('#party-name').value.trim();
-  // const partydate = document.querySelector('#party-date').value;
+  const date = document.querySelector('#party-date').value.trim();
+  const guests = document.querySelector('#party-number').value.trim();
   const description = document.querySelector('#party-description').value.trim();
+  const decorations = finalDecorationAnswer.toString();
+  const music = finalMusicAnswer.toString();
+  const food_drinks = finalFdAnswer.toString();
+  const activities = finalActivitesAnswer.toString();
 
-  if (name && description) {
+  if (name && description && date && guests && decorations && music && food_drinks && activities) {
     const response = await fetch(`/api/parties`, {
       method: 'POST',
-      body: JSON.stringify({name, description}),
+      body: JSON.stringify({name, description, date, guests, decorations, music, food_drinks, activities}),
       
       headers: {
         'Content-Type': 'application/json',
@@ -304,17 +291,3 @@ const submitFormHandler = async (event) => {
 };
 const submitBtn = document.querySelector('#submit-party');
 submitBtn.addEventListener('click', submitFormHandler);
-
-
-
-
-// TEST BUTTON
-// const testPage = async (event) => {
-//   event.preventDefault();
-//       document.location.replace('/party-form');
-//       console.log('is it working');
-  
-// };
-
-// const addBtn = document.getElementById('#test');
-// addBtn.addEventListener('click', testPage);

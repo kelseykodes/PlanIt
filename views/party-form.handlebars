@@ -1,22 +1,3 @@
-{{!-- Party Form Completed --}}
-<nav class="nav-extended">
-    <div class="nav-wrapper">
-        <header class="brand-logo center"><img src='https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif'
-                width="50px" height="50px">Welcome to PlanIt </header>
-        <!-- for mobile use -->
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        {{!-- Home Button Works --}}
-        <ul class="left hide-on-med-and-down">
-            <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
-        </ul>
-        {{!-- Logout  will be rendered --}}
-        <ul class="right hide-on-med-and-down">
-            {{!-- IF THE USER IS LOGGED IN, LOGOUT BUTTON WILL APPEAR --}}
-            {{!-- This would take you to Dashboard --}}
-            <li class="right"><a class="waves-effect waves-light btn" href="/login">Dashboard</a></li>
-        </ul>
-    </div>
-</nav>   
 <main>
   {{!--Refreash Button --}}
   {{#each parties }}
@@ -27,7 +8,7 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s12">
-            <input placeholder="Placeholder" id="party-name" type="text" class="validate" value={{party.name}}>
+            <input placeholder="Placeholder" id="party-name" type="text" class="validate">
             <label for="name">Name</label>
           </div>
         </div>
@@ -58,7 +39,7 @@
                 <!-- the Decoration list added here -->
                 <ul id="current-decoration-list" style='color: aliceblue; font-size: larger;'></ul>
               </div>
-              <div class="card-action" id="edges">
+              <div class="card-action" style='border-radius: 25px;'>
                 <a href="#">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -80,7 +61,7 @@
                         <div class="modal-body">
                           <div class='container1'>
                             <ul class="category-list collapsible expandable col s12 m12">
-                              <li class='active'>
+                              <li>
                                 <!-- name of the category -->
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
@@ -161,7 +142,7 @@
                 <!-- origin save button, can be: <button class="waves-effect waves-light btn" id="saveBtn">Save</button>      -->
               </div>
 
-              <div class="card-action" id="edges">
+              <div class="card-action" style='border-radius: 25px;'>
                 <a href="#">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#musicExampleModal">
@@ -184,7 +165,7 @@
                           <!-- music list -->
                           <div class='container'>
                             <ul class="category-list collapsible expandable col s12 m12">
-                              <li class='active'>
+                              <li>
                                 <!-- name of the category -->
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
@@ -202,7 +183,7 @@
                                   </form>
                                 </div>
                               </li>
-                              <li class='active'>
+                              <li>
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
                                     class="material-icons">ac_unit</i>Christmas</div>
@@ -224,7 +205,7 @@
                                   </form>
                                 </div>
                               </li>
-                              <li class='active'>
+                              <li>
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
                                     class="material-icons">whatshot</i>NightClub</div>
@@ -276,7 +257,7 @@
                 </ul>
               </div>
 
-              <div class="card-action" id="edges">
+              <div class="card-action" style='border-radius: 25px;'>
                 <a href="#">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -300,7 +281,7 @@
                           <!-- Food&Drinks list -->
                           <div class='container'>
                             <ul class="category-list collapsible expandable col s12 m12">
-                              <li class='active'>
+                              <li>
                                 <!-- name of the category -->
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
@@ -365,7 +346,7 @@
                                   </form>
                                 </div>
                               </li>
-                              <li class='active'>
+                              <li>
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
                                     class="material-icons">local_bar</i>Drinks</div>
@@ -456,7 +437,7 @@
                 </ul>
               </div>
 
-              <div class="card-action" id="edges">
+              <div class="card-action" style='border-radius: 25px;'>
                 <a href="#">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -480,7 +461,7 @@
                           <!-- activities list -->
                           <div class='container'>
                             <ul class="category-list collapsible expandable col s12 m12">
-                              <li class='active'>
+                              <li>
                                 <!-- name of the category -->
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
@@ -514,7 +495,7 @@
                                   </form>
                                 </div>
                               </li>
-                              <li class='active'>
+                              <li>
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i class="material-icons">tv</i>Movies
                                 </div>
@@ -547,7 +528,7 @@
                                   </form>
                                 </div>
                               </li>
-                              <li class='active'>
+                              <li>
                                 <div class="collapsible-header teal lighten-2"
                                   style='color: aliceblue; font-size: larger;'><i
                                     class="material-icons">video_library</i>Others</div>
@@ -610,4 +591,3 @@
     </div>
   </div>
 </main>
-
