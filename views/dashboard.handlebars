@@ -67,8 +67,9 @@
             <div class="card">
                 <div class="card-image">
                     <img src="./image/newParty.jpeg">
-   <span class="card-title">{{party.name}}</span>
+                <span class="card-title">{{party.name}}</span>
                 </div>
+                {{!-- Showing a count down timer for each party based on their arrangement --}}
                 <div class="card-content">
                     <p id="demo" style="color:rgb(17, 198, 150)"></p>
 
@@ -108,7 +109,7 @@
                     <p><i class="material-icons">local_grocery_store</i>  Decorations: {{party.decorations}}</p>
                     <p><i class="material-icons">library_music</i>  Music: {{party.music}}</p>
                     <p><i class="material-icons">local_dining</i>  Food and Drinks: {{party.food_drinks}}</p>
-                    <p>Activities: {{party.activities}}</p>
+                    <p><i class="material-icons">tv</i>  Activities: {{party.activities}}</p>
                 </div>
                 <div class="card-action">
                    {{!-- <a href="/party-form-edit/{{party.id}}"> <button id={{party.id}} class='editBtn'>Edit</button></a> --}}

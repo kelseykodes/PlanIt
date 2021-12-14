@@ -16,11 +16,11 @@ router.get('/', (req, res) => {
 
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    console.log('Start fetch')
+    // console.log('Start fetch')
     const partyData = await Party.findAll();
-    console.log('Start parties');
+    // console.log('Start parties');
     const parties = partyData.map((party)=> party.get({plain: true}));
-    console.log(parties);
+    // console.log(parties);
     res.render('dashboard',{
       parties,
       logged_in: req.session.logged_in
