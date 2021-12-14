@@ -27,6 +27,22 @@ Party.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    decorations: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    music: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    food_drinks: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    activities: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
