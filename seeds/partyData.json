@@ -1,0 +1,20 @@
+[
+    {
+      "name": "New Year Party",
+      "description": "I need to go back to my parent's place to celebrate new year.",
+      "date": "2022-01-01",
+      "guests":"20"
+    },
+    {
+        "name": "Girl's Night Out",
+        "description": "Our group for the bootcamp will get together to go a good restaurant. ",
+        "date": "2022-02-23",
+        "guests":"4"
+    },
+    {
+        "name": "Jing's Birthday",
+        "description": "We gonna celebrate Jing's 30th birthday ",
+        "date": "2022-09-13",
+        "guests":"10"
+    }
+]
