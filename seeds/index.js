@@ -1,30 +1,27 @@
 const sequelize = require('../config/connection');
-const seedActivities = require('./activities');
-const seedMusic = require('./music');
-const seedDecoration = require('./decoration');
-const seedFood = require('./food');
-const seedDrink = require('./drink');
+const Party = require('../models/Party');
+const User = require('../models/User');
 
-const seedAll = async () => {
+
+const userData = require('./userData.json');
+const partyData = require('./partyData.json');
+
+const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-  console.log('\n----- DATABASE SYNCED -----\n');
 
-  await seedActivities();
-  console.log('\n----- Activities SEEDED -----\n');
-  
-  await seedMusic();
-  console.log('\n----- MUSIC SEEDED -----\n');
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-  await seedDecoration();
-  console.log('\n----- DECORATION SEEDED -----\n');
-
-  await seedFood();
-  console.log('\n----- FOOD SEEDED -----\n');
-
-  await seedDrink();
-  console.log('\n----- DRINK SEEDED -----\n');
+  for (const list of partyData) {
+    await Party.create({
+      ...list,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
 
   process.exit(0);
 };
 
-seedAll();
+seedDatabase();

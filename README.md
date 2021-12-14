@@ -28,8 +28,10 @@ SO THAT I can organize my gatherings with helpful suggestions to guide me in tho
 
 
 ## Credits
+- New stuff that we never discuss in the class:
 - Confetti code from https://www.youtube.com/watch?v=quSR_ZrVz6Y&t=44s
 - https://github.com/CoderZ90/confetti/blob/main/confetti.js (Confetti Code)
+- Countdown code from https://www.w3schools.com/howto/howto_js_countdown.asp
 
 ## Collaborators
 
