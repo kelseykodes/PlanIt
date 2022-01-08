@@ -4,7 +4,8 @@ Party Planning App
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
-This assignment is set to display an updated weather forecast of any city chosen by the user. The weather dashboard will allow me to showcase my knowledge of using and properly applying server-side API keys. Local storage is also a main component in this assignment.
+As an party host I want an event planner accountability application so that I can organize my gatherings with helpful suggestions to guide me thoroughly plan a successful, active celebration. 
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -28,20 +29,21 @@ SO THAT I can organize my gatherings with helpful suggestions to guide me in tho
 
 
 ## Credits
-- New stuff that we never discuss in the class:
-- Confetti code from https://www.youtube.com/watch?v=quSR_ZrVz6Y&t=44s
-- https://github.com/CoderZ90/confetti/blob/main/confetti.js (Confetti Code)
-- Countdown code from https://www.w3schools.com/howto/howto_js_countdown.asp
+- Confetti code from <a href="https://www.youtube.com/watch?v=quSR_ZrVz6Y&t=44s">Here</a>
+- <a href="https://github.com/CoderZ90/confetti/blob/main/confetti.js"> (Confetti Code)</a>
+- Countdown code from <a href="https://www.w3schools.com/howto/howto_js_countdown.asp">Here</a>
+
 
 ## Collaborators
 
-- Reagin Turner: https://github.com/Reagintaylor
-- Jing Li: https://github.com/lijing-code
-- Eldana Desalgne: https://github.com/ed2022
+- <a href="https://github.com/Reagintaylor">Reagin Turner</a>  
+- <a href="https://github.com/lijing-code">Jing Li</a>  
+- <a href="https://github.com/kelseykodes">Kelsey Perkins</a>  
+- <a href="https://github.com/ed2022">Eldana Desalgne</a>  
 
 ## Website Preview 
-- Heroku Deployment: https://evening-earth-70019.herokuapp.com/
-- Webpage Preview Screen
+- <a href="https://evening-earth-70019.herokuapp.com/">Heroku Deployment</a>
+- Webpage Preview Screen:
 
 <img src='./public/image/website.jpg'>
 
